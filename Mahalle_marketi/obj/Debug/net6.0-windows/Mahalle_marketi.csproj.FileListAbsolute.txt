@@ -34,3 +34,5 @@ C:\Users\OUSSAMA\Desktop\Mahalle_marketiApp\Mahalle_marketi\obj\Debug\net6.0-win
 C:\Users\OUSSAMA\Desktop\Mahalle_marketiApp\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.pdb
 C:\Users\OUSSAMA\Desktop\Mahalle_marketiApp\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.genruntimeconfig.cache
 C:\Users\OUSSAMA\Desktop\Mahalle_marketiApp\Mahalle_marketi\obj\Debug\net6.0-windows\ref\Mahalle_marketi.dll
+C:\Users\OUSSAMA\Desktop\Mahalle_marketiApp\Mahalle_marketi\bin\Debug\net6.0-windows\FontAwesome.Sharp.dll
+C:\Users\OUSSAMA\Desktop\Mahalle_marketiApp\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.csproj.CopyComplete
