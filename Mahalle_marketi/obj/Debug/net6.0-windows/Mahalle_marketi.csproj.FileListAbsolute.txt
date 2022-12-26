@@ -36,3 +36,23 @@ C:\Users\OUSSAMA\Desktop\Mahalle_marketiApp\Mahalle_marketi\obj\Debug\net6.0-win
 C:\Users\OUSSAMA\Desktop\Mahalle_marketiApp\Mahalle_marketi\obj\Debug\net6.0-windows\ref\Mahalle_marketi.dll
 C:\Users\OUSSAMA\Desktop\Mahalle_marketiApp\Mahalle_marketi\bin\Debug\net6.0-windows\FontAwesome.Sharp.dll
 C:\Users\OUSSAMA\Desktop\Mahalle_marketiApp\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.csproj.CopyComplete
+C:\Users\Abduljalal lawal\Source\Repos\Mahalle_marketiApp\Mahalle_marketi\bin\Debug\net6.0-windows\Mahalle_marketi.exe
+C:\Users\Abduljalal lawal\Source\Repos\Mahalle_marketiApp\Mahalle_marketi\bin\Debug\net6.0-windows\Mahalle_marketi.deps.json
+C:\Users\Abduljalal lawal\Source\Repos\Mahalle_marketiApp\Mahalle_marketi\bin\Debug\net6.0-windows\Mahalle_marketi.runtimeconfig.json
+C:\Users\Abduljalal lawal\Source\Repos\Mahalle_marketiApp\Mahalle_marketi\bin\Debug\net6.0-windows\Mahalle_marketi.dll
+C:\Users\Abduljalal lawal\Source\Repos\Mahalle_marketiApp\Mahalle_marketi\bin\Debug\net6.0-windows\Mahalle_marketi.pdb
+C:\Users\Abduljalal lawal\Source\Repos\Mahalle_marketiApp\Mahalle_marketi\bin\Debug\net6.0-windows\FontAwesome.Sharp.dll
+C:\Users\Abduljalal lawal\Source\Repos\Mahalle_marketiApp\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.csproj.AssemblyReference.cache
+C:\Users\Abduljalal lawal\Source\Repos\Mahalle_marketiApp\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.Form1.resources
+C:\Users\Abduljalal lawal\Source\Repos\Mahalle_marketiApp\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.Properties.Resources.resources
+C:\Users\Abduljalal lawal\Source\Repos\Mahalle_marketiApp\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.csproj.GenerateResource.cache
+C:\Users\Abduljalal lawal\Source\Repos\Mahalle_marketiApp\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Abduljalal lawal\Source\Repos\Mahalle_marketiApp\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.AssemblyInfoInputs.cache
+C:\Users\Abduljalal lawal\Source\Repos\Mahalle_marketiApp\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.AssemblyInfo.cs
+C:\Users\Abduljalal lawal\Source\Repos\Mahalle_marketiApp\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.csproj.CoreCompileInputs.cache
+C:\Users\Abduljalal lawal\Source\Repos\Mahalle_marketiApp\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.csproj.CopyComplete
+C:\Users\Abduljalal lawal\Source\Repos\Mahalle_marketiApp\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.dll
+C:\Users\Abduljalal lawal\Source\Repos\Mahalle_marketiApp\Mahalle_marketi\obj\Debug\net6.0-windows\refint\Mahalle_marketi.dll
+C:\Users\Abduljalal lawal\Source\Repos\Mahalle_marketiApp\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.pdb
+C:\Users\Abduljalal lawal\Source\Repos\Mahalle_marketiApp\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.genruntimeconfig.cache
+C:\Users\Abduljalal lawal\Source\Repos\Mahalle_marketiApp\Mahalle_marketi\obj\Debug\net6.0-windows\ref\Mahalle_marketi.dll

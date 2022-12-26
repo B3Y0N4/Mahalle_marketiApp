@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "SSN02CEUgE081rqoKMJD+gJVR9PDp4x5iryiEXC0LyAwCvt2EijEhHje6dkkjTEgXP0nk48hHoV2M8hupa1GUQ==",
+  "dgSpecHash": "4eakMCk3U89TFz0NguVd9VscQMrhKMHFYSoyDJcKBN70qKx9eqiLTkkiwcUjioWwJMx/Yq9QTAVOZcWGfLuodg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\OUSSAMA\\Desktop\\Mahalle_marketiApp\\Mahalle_marketi\\Mahalle_marketi.csproj",
+  "projectFilePath": "C:\\Users\\Abduljalal lawal\\Source\\Repos\\Mahalle_marketiApp\\Mahalle_marketi\\Mahalle_marketi.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\OUSSAMA\\.nuget\\packages\\fontawesome.sharp\\6.2.1\\fontawesome.sharp.6.2.1.nupkg.sha512"
+    "C:\\Users\\Abduljalal lawal\\.nuget\\packages\\fontawesome.sharp\\6.2.1\\fontawesome.sharp.6.2.1.nupkg.sha512"
   ],
   "logs": []
 }
