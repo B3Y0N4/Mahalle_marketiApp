@@ -194,7 +194,7 @@
             this.ClientSize = new System.Drawing.Size(664, 517);
             this.Controls.Add(this.panelNavigation);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Market Sistem yönetimi";
             this.panelNavigation.ResumeLayout(false);
             this.panelMarket.ResumeLayout(false);
             this.ResumeLayout(false);
