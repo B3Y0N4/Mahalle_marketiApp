@@ -103,6 +103,16 @@ namespace Mahalle_marketi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_expand_arrow_30 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-expand-arrow-30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_shop_30 {
             get {
                 object obj = ResourceManager.GetObject("icons8-shop-30", resourceCulture);
