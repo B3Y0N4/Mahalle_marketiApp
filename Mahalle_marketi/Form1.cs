@@ -94,5 +94,10 @@ namespace Mahalle_marketi
             showPanelStok = false;
             togglePanels();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
