@@ -40,7 +40,6 @@
             this.panelMarket = new System.Windows.Forms.Panel();
             this.labelSeparator = new System.Windows.Forms.Label();
             this.panel_basket = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panelNavigation.SuspendLayout();
             this.panelStok.SuspendLayout();
             this.panelMarket.SuspendLayout();
@@ -265,20 +264,11 @@
             this.panel_basket.Size = new System.Drawing.Size(139, 114);
             this.panel_basket.TabIndex = 0;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel1.Location = new System.Drawing.Point(311, 101);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 100);
-            this.panel1.TabIndex = 1;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(664, 517);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelNavigation);
             this.Name = "Form1";
             this.Text = "Market Sistem yönetimi";
@@ -303,6 +293,5 @@
         private Panel panelStok;
         private FontAwesome.Sharp.IconButton btn_stok_girisi;
         private FontAwesome.Sharp.IconButton btn_urunler;
-        private Panel panel1;
     }
 }
