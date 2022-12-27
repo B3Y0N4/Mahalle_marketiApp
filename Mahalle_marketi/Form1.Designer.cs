@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.panelNavigation = new System.Windows.Forms.Panel();
-            this.panelStok = new System.Windows.Forms.Panel();
-            this.btn_stok_girisi = new FontAwesome.Sharp.IconButton();
-            this.btn_urunler = new FontAwesome.Sharp.IconButton();
             this.btn_cikis = new FontAwesome.Sharp.IconButton();
             this.btn_stok = new FontAwesome.Sharp.IconButton();
             this.btn_tedarikci_detaylari = new FontAwesome.Sharp.IconButton();
@@ -40,15 +37,14 @@
             this.panelMarket = new System.Windows.Forms.Panel();
             this.labelSeparator = new System.Windows.Forms.Label();
             this.panel_basket = new System.Windows.Forms.Panel();
+            this.panelContainer = new System.Windows.Forms.Panel();
             this.panelNavigation.SuspendLayout();
-            this.panelStok.SuspendLayout();
             this.panelMarket.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelNavigation
             // 
             this.panelNavigation.BackColor = System.Drawing.Color.White;
-            this.panelNavigation.Controls.Add(this.panelStok);
             this.panelNavigation.Controls.Add(this.btn_cikis);
             this.panelNavigation.Controls.Add(this.btn_stok);
             this.panelNavigation.Controls.Add(this.btn_tedarikci_detaylari);
@@ -58,62 +54,8 @@
             this.panelNavigation.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelNavigation.Location = new System.Drawing.Point(0, 0);
             this.panelNavigation.Name = "panelNavigation";
-            this.panelNavigation.Size = new System.Drawing.Size(200, 517);
+            this.panelNavigation.Size = new System.Drawing.Size(230, 611);
             this.panelNavigation.TabIndex = 0;
-            // 
-            // panelStok
-            // 
-            this.panelStok.Controls.Add(this.btn_stok_girisi);
-            this.panelStok.Controls.Add(this.btn_urunler);
-            this.panelStok.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelStok.Location = new System.Drawing.Point(0, 271);
-            this.panelStok.Name = "panelStok";
-            this.panelStok.Size = new System.Drawing.Size(200, 82);
-            this.panelStok.TabIndex = 6;
-            // 
-            // btn_stok_girisi
-            // 
-            this.btn_stok_girisi.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_stok_girisi.FlatAppearance.BorderSize = 0;
-            this.btn_stok_girisi.FlatAppearance.MouseDownBackColor = System.Drawing.Color.GreenYellow;
-            this.btn_stok_girisi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_stok_girisi.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_stok_girisi.ForeColor = System.Drawing.Color.Green;
-            this.btn_stok_girisi.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btn_stok_girisi.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(252)))), ((int)(((byte)(76)))));
-            this.btn_stok_girisi.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_stok_girisi.IconSize = 25;
-            this.btn_stok_girisi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_stok_girisi.Location = new System.Drawing.Point(0, 35);
-            this.btn_stok_girisi.Name = "btn_stok_girisi";
-            this.btn_stok_girisi.Size = new System.Drawing.Size(200, 35);
-            this.btn_stok_girisi.TabIndex = 6;
-            this.btn_stok_girisi.Text = "  Stok Girişi";
-            this.btn_stok_girisi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_stok_girisi.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_stok_girisi.UseVisualStyleBackColor = true;
-            // 
-            // btn_urunler
-            // 
-            this.btn_urunler.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_urunler.FlatAppearance.BorderSize = 0;
-            this.btn_urunler.FlatAppearance.MouseDownBackColor = System.Drawing.Color.GreenYellow;
-            this.btn_urunler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_urunler.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_urunler.ForeColor = System.Drawing.Color.Green;
-            this.btn_urunler.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btn_urunler.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(252)))), ((int)(((byte)(76)))));
-            this.btn_urunler.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_urunler.IconSize = 25;
-            this.btn_urunler.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_urunler.Location = new System.Drawing.Point(0, 0);
-            this.btn_urunler.Name = "btn_urunler";
-            this.btn_urunler.Size = new System.Drawing.Size(200, 35);
-            this.btn_urunler.TabIndex = 5;
-            this.btn_urunler.Text = "  Ürünler";
-            this.btn_urunler.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_urunler.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_urunler.UseVisualStyleBackColor = true;
             // 
             // btn_cikis
             // 
@@ -128,9 +70,9 @@
             this.btn_cikis.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_cikis.IconSize = 25;
             this.btn_cikis.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_cikis.Location = new System.Drawing.Point(0, 482);
+            this.btn_cikis.Location = new System.Drawing.Point(0, 561);
             this.btn_cikis.Name = "btn_cikis";
-            this.btn_cikis.Size = new System.Drawing.Size(200, 35);
+            this.btn_cikis.Size = new System.Drawing.Size(230, 50);
             this.btn_cikis.TabIndex = 5;
             this.btn_cikis.Text = "  Çıkış";
             this.btn_cikis.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -151,9 +93,9 @@
             this.btn_stok.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_stok.IconSize = 25;
             this.btn_stok.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_stok.Location = new System.Drawing.Point(0, 236);
+            this.btn_stok.Location = new System.Drawing.Point(0, 310);
             this.btn_stok.Name = "btn_stok";
-            this.btn_stok.Size = new System.Drawing.Size(200, 35);
+            this.btn_stok.Size = new System.Drawing.Size(230, 50);
             this.btn_stok.TabIndex = 4;
             this.btn_stok.Text = "  Stok";
             this.btn_stok.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -174,9 +116,9 @@
             this.btn_tedarikci_detaylari.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_tedarikci_detaylari.IconSize = 25;
             this.btn_tedarikci_detaylari.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_tedarikci_detaylari.Location = new System.Drawing.Point(0, 201);
+            this.btn_tedarikci_detaylari.Location = new System.Drawing.Point(0, 260);
             this.btn_tedarikci_detaylari.Name = "btn_tedarikci_detaylari";
-            this.btn_tedarikci_detaylari.Size = new System.Drawing.Size(200, 35);
+            this.btn_tedarikci_detaylari.Size = new System.Drawing.Size(230, 50);
             this.btn_tedarikci_detaylari.TabIndex = 3;
             this.btn_tedarikci_detaylari.Text = "  Tedarikçi detayları";
             this.btn_tedarikci_detaylari.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -197,9 +139,9 @@
             this.btn_borc_odeme.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_borc_odeme.IconSize = 25;
             this.btn_borc_odeme.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_borc_odeme.Location = new System.Drawing.Point(0, 166);
+            this.btn_borc_odeme.Location = new System.Drawing.Point(0, 210);
             this.btn_borc_odeme.Name = "btn_borc_odeme";
-            this.btn_borc_odeme.Size = new System.Drawing.Size(200, 35);
+            this.btn_borc_odeme.Size = new System.Drawing.Size(230, 50);
             this.btn_borc_odeme.TabIndex = 2;
             this.btn_borc_odeme.Text = "  Borç ödeme";
             this.btn_borc_odeme.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -220,9 +162,9 @@
             this.btn_satis.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_satis.IconSize = 25;
             this.btn_satis.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_satis.Location = new System.Drawing.Point(0, 131);
+            this.btn_satis.Location = new System.Drawing.Point(0, 160);
             this.btn_satis.Name = "btn_satis";
-            this.btn_satis.Size = new System.Drawing.Size(200, 35);
+            this.btn_satis.Size = new System.Drawing.Size(230, 50);
             this.btn_satis.TabIndex = 1;
             this.btn_satis.Text = "  Satış";
             this.btn_satis.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -239,7 +181,7 @@
             this.panelMarket.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelMarket.Location = new System.Drawing.Point(0, 0);
             this.panelMarket.Name = "panelMarket";
-            this.panelMarket.Size = new System.Drawing.Size(200, 131);
+            this.panelMarket.Size = new System.Drawing.Size(230, 160);
             this.panelMarket.TabIndex = 0;
             // 
             // labelSeparator
@@ -249,9 +191,9 @@
             this.labelSeparator.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.labelSeparator.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelSeparator.ForeColor = System.Drawing.Color.White;
-            this.labelSeparator.Location = new System.Drawing.Point(0, 130);
+            this.labelSeparator.Location = new System.Drawing.Point(0, 159);
             this.labelSeparator.Name = "labelSeparator";
-            this.labelSeparator.Size = new System.Drawing.Size(200, 1);
+            this.labelSeparator.Size = new System.Drawing.Size(230, 1);
             this.labelSeparator.TabIndex = 1;
             // 
             // panel_basket
@@ -259,21 +201,30 @@
             this.panel_basket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(252)))), ((int)(((byte)(76)))));
             this.panel_basket.BackgroundImage = global::Mahalle_marketi.Properties.Resources.tutti_shopping_basket_with_fruit_milk_and_wine_1;
             this.panel_basket.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel_basket.Location = new System.Drawing.Point(32, 0);
+            this.panel_basket.Location = new System.Drawing.Point(46, 23);
             this.panel_basket.Name = "panel_basket";
             this.panel_basket.Size = new System.Drawing.Size(139, 114);
             this.panel_basket.TabIndex = 0;
+            // 
+            // panelContainer
+            // 
+            this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContainer.Location = new System.Drawing.Point(230, 0);
+            this.panelContainer.Name = "panelContainer";
+            this.panelContainer.Size = new System.Drawing.Size(654, 611);
+            this.panelContainer.TabIndex = 1;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(664, 517);
+            this.ClientSize = new System.Drawing.Size(884, 611);
+            this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.panelNavigation);
+            this.MinimumSize = new System.Drawing.Size(900, 650);
             this.Name = "Form1";
             this.Text = "Market Sistem yönetimi";
             this.panelNavigation.ResumeLayout(false);
-            this.panelStok.ResumeLayout(false);
             this.panelMarket.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -290,8 +241,6 @@
         private FontAwesome.Sharp.IconButton btn_tedarikci_detaylari;
         private FontAwesome.Sharp.IconButton btn_borc_odeme;
         private FontAwesome.Sharp.IconButton btn_satis;
-        private Panel panelStok;
-        private FontAwesome.Sharp.IconButton btn_stok_girisi;
-        private FontAwesome.Sharp.IconButton btn_urunler;
+        private Panel panelContainer;
     }
 }

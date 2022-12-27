@@ -13,5 +13,6 @@ namespace Mahalle_marketi
             ApplicationConfiguration.Initialize();
             Application.Run(new Form1());
         }
+        
     }
 }

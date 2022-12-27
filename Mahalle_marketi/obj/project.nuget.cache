@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "SSN02CEUgE081rqoKMJD+gJVR9PDp4x5iryiEXC0LyAwCvt2EijEhHje6dkkjTEgXP0nk48hHoV2M8hupa1GUQ==",
+  "dgSpecHash": "fMmPZ+/1DM90YZ+35FZ/LaePXMeA0I+JTLACLO/SuICN/6jetrWz6MCcNf85Fff6wl0sUGY29rzSQjne9REzOA==",
   "success": true,
   "projectFilePath": "C:\\Users\\OUSSAMA\\Desktop\\Mahalle_marketiApp\\Mahalle_marketi\\Mahalle_marketi.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\OUSSAMA\\.nuget\\packages\\fontawesome.sharp\\6.2.1\\fontawesome.sharp.6.2.1.nupkg.sha512"
+    "C:\\Users\\OUSSAMA\\.nuget\\packages\\fontawesome.sharp\\6.2.1\\fontawesome.sharp.6.2.1.nupkg.sha512",
+    "C:\\Users\\OUSSAMA\\.nuget\\packages\\guna.ui2.winforms\\2.0.3.9\\guna.ui2.winforms.2.0.3.9.nupkg.sha512",
+    "C:\\Users\\OUSSAMA\\.nuget\\packages\\system.codedom\\6.0.0\\system.codedom.6.0.0.nupkg.sha512",
+    "C:\\Users\\OUSSAMA\\.nuget\\packages\\system.management\\6.0.0\\system.management.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }

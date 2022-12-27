@@ -8,7 +8,8 @@
     ".NETCoreApp,Version=v6.0": {
       "Mahalle_marketi/1.0.0": {
         "dependencies": {
-          "FontAwesome.Sharp": "6.2.1"
+          "FontAwesome.Sharp": "6.2.1",
+          "Guna.UI2.WinForms": "2.0.3.9"
         },
         "runtime": {
           "Mahalle_marketi.dll": {}
@@ -19,6 +20,37 @@
           "lib/net6.0-windows7.0/FontAwesome.Sharp.dll": {
             "assemblyVersion": "6.2.1.0",
             "fileVersion": "6.2.1.0"
+          }
+        }
+      },
+      "Guna.UI2.WinForms/2.0.3.9": {
+        "dependencies": {
+          "System.Management": "6.0.0"
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/Guna.UI2.dll": {
+            "assemblyVersion": "2.0.3.9",
+            "fileVersion": "2.0.3.9"
+          }
+        }
+      },
+      "System.CodeDom/6.0.0": {},
+      "System.Management/6.0.0": {
+        "dependencies": {
+          "System.CodeDom": "6.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/System.Management.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net6.0/System.Management.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "6.0.21.52210"
           }
         }
       }
@@ -36,6 +68,27 @@
       "sha512": "sha512-eYpj85+70pOjV4cOfB/Et/Rj6m56WRlCKU2G4ivWCohb7sF7DwHz/3jy8XIWp9utgb/R2Pqm+HsaBwV33FBNbg==",
       "path": "fontawesome.sharp/6.2.1",
       "hashPath": "fontawesome.sharp.6.2.1.nupkg.sha512"
+    },
+    "Guna.UI2.WinForms/2.0.3.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zpuviaQrE90eAFA7BQVp7c/8te3IeiB+kVxbhD55rJ3JYStkaO8OrU6dgEsqWSCzAcaNT7EeiaSwxrFWho+Hvg==",
+      "path": "guna.ui2.winforms/2.0.3.9",
+      "hashPath": "guna.ui2.winforms.2.0.3.9.nupkg.sha512"
+    },
+    "System.CodeDom/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-CPc6tWO1LAer3IzfZufDBRL+UZQcj5uS207NHALQzP84Vp/z6wF0Aa0YZImOQY8iStY0A2zI/e3ihKNPfUm8XA==",
+      "path": "system.codedom/6.0.0",
+      "hashPath": "system.codedom.6.0.0.nupkg.sha512"
+    },
+    "System.Management/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-sHsESYMmPDhQuOC66h6AEOs/XowzKsbT9srMbX71TCXP58hkpn1BqBjdmKj1+DCA/WlBETX1K5WjQHwmV0Txrg==",
+      "path": "system.management/6.0.0",
+      "hashPath": "system.management.6.0.0.nupkg.sha512"
     }
   }
 }
