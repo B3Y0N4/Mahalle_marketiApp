@@ -1,6 +1,6 @@
 ﻿namespace Mahalle_marketi.UserControls
 {
-    partial class UC_Stok
+    partial class UC_kayitlar
     {
         /// <summary> 
         /// Required designer variable.
@@ -32,47 +32,47 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            this.PanelStok = new System.Windows.Forms.Panel();
-            this.labelStok = new System.Windows.Forms.Label();
+            this.PanelKayitlar = new System.Windows.Forms.Panel();
+            this.labelKayitlar = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_stok_girisi = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_urunler = new Guna.UI2.WinForms.Guna2Button();
-            this.PanelStok.SuspendLayout();
+            this.btn_satisGecmisi = new Guna.UI2.WinForms.Guna2Button();
+            this.PanelKayitlar.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // PanelStok
+            // PanelKayitlar
             // 
-            this.PanelStok.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.PanelStok.Controls.Add(this.labelStok);
-            this.PanelStok.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelStok.Location = new System.Drawing.Point(0, 0);
-            this.PanelStok.Name = "PanelStok";
-            this.PanelStok.Size = new System.Drawing.Size(654, 110);
-            this.PanelStok.TabIndex = 3;
+            this.PanelKayitlar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.PanelKayitlar.Controls.Add(this.labelKayitlar);
+            this.PanelKayitlar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PanelKayitlar.Location = new System.Drawing.Point(0, 0);
+            this.PanelKayitlar.Name = "PanelKayitlar";
+            this.PanelKayitlar.Size = new System.Drawing.Size(654, 110);
+            this.PanelKayitlar.TabIndex = 4;
             // 
-            // labelStok
+            // labelKayitlar
             // 
-            this.labelStok.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelStok.AutoSize = true;
-            this.labelStok.Font = new System.Drawing.Font("Calibri", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelStok.ForeColor = System.Drawing.Color.White;
-            this.labelStok.Location = new System.Drawing.Point(279, 31);
-            this.labelStok.Name = "labelStok";
-            this.labelStok.Size = new System.Drawing.Size(96, 49);
-            this.labelStok.TabIndex = 0;
-            this.labelStok.Text = "Stok";
+            this.labelKayitlar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelKayitlar.AutoSize = true;
+            this.labelKayitlar.Font = new System.Drawing.Font("Calibri", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelKayitlar.ForeColor = System.Drawing.Color.White;
+            this.labelKayitlar.Location = new System.Drawing.Point(253, 31);
+            this.labelKayitlar.Name = "labelKayitlar";
+            this.labelKayitlar.Size = new System.Drawing.Size(149, 49);
+            this.labelKayitlar.TabIndex = 0;
+            this.labelKayitlar.Text = "Kayıtlar";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.btn_stok_girisi);
-            this.panel1.Controls.Add(this.btn_urunler);
+            this.panel1.Controls.Add(this.btn_satisGecmisi);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 110);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(654, 50);
-            this.panel1.TabIndex = 4;
+            this.panel1.TabIndex = 5;
             // 
             // btn_stok_girisi
             // 
@@ -93,40 +93,40 @@
             this.btn_stok_girisi.Name = "btn_stok_girisi";
             this.btn_stok_girisi.PressedColor = System.Drawing.Color.GreenYellow;
             this.btn_stok_girisi.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            this.btn_stok_girisi.Size = new System.Drawing.Size(157, 50);
+            this.btn_stok_girisi.Size = new System.Drawing.Size(216, 50);
             this.btn_stok_girisi.TabIndex = 6;
-            this.btn_stok_girisi.Text = "Stok Girişi";
+            this.btn_stok_girisi.Text = "Satılan ürün kayıtları";
             // 
-            // btn_urunler
+            // btn_satisGecmisi
             // 
-            this.btn_urunler.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btn_urunler.Checked = true;
-            this.btn_urunler.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(252)))), ((int)(((byte)(76)))));
-            this.btn_urunler.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btn_urunler.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.btn_urunler.CustomizableEdges = customizableEdges3;
-            this.btn_urunler.FillColor = System.Drawing.Color.Empty;
-            this.btn_urunler.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_urunler.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btn_urunler.HoverState.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_urunler.Location = new System.Drawing.Point(0, 0);
-            this.btn_urunler.Name = "btn_urunler";
-            this.btn_urunler.PressedColor = System.Drawing.Color.GreenYellow;
-            this.btn_urunler.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            this.btn_urunler.Size = new System.Drawing.Size(157, 50);
-            this.btn_urunler.TabIndex = 5;
-            this.btn_urunler.Text = "Ürünler";
+            this.btn_satisGecmisi.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btn_satisGecmisi.Checked = true;
+            this.btn_satisGecmisi.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(252)))), ((int)(((byte)(76)))));
+            this.btn_satisGecmisi.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btn_satisGecmisi.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.btn_satisGecmisi.CustomizableEdges = customizableEdges3;
+            this.btn_satisGecmisi.FillColor = System.Drawing.Color.Empty;
+            this.btn_satisGecmisi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_satisGecmisi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_satisGecmisi.HoverState.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_satisGecmisi.Location = new System.Drawing.Point(0, 0);
+            this.btn_satisGecmisi.Name = "btn_satisGecmisi";
+            this.btn_satisGecmisi.PressedColor = System.Drawing.Color.GreenYellow;
+            this.btn_satisGecmisi.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            this.btn_satisGecmisi.Size = new System.Drawing.Size(157, 50);
+            this.btn_satisGecmisi.TabIndex = 5;
+            this.btn_satisGecmisi.Text = "Satış Kayıtları";
             // 
-            // UC_Stok
+            // UC_kayitlar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.PanelStok);
-            this.Name = "UC_Stok";
+            this.Controls.Add(this.PanelKayitlar);
+            this.Name = "UC_kayitlar";
             this.Size = new System.Drawing.Size(654, 611);
-            this.PanelStok.ResumeLayout(false);
-            this.PanelStok.PerformLayout();
+            this.PanelKayitlar.ResumeLayout(false);
+            this.PanelKayitlar.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -134,10 +134,10 @@
 
         #endregion
 
-        private Panel PanelStok;
-        private Label labelStok;
+        private Panel PanelKayitlar;
+        private Label labelKayitlar;
         private Panel panel1;
         private Guna.UI2.WinForms.Guna2Button btn_stok_girisi;
-        private Guna.UI2.WinForms.Guna2Button btn_urunler;
+        private Guna.UI2.WinForms.Guna2Button btn_satisGecmisi;
     }
 }

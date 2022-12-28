@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelNavigation = new System.Windows.Forms.Panel();
+            this.btn_kayitlar = new FontAwesome.Sharp.IconButton();
             this.btn_cikis = new FontAwesome.Sharp.IconButton();
             this.btn_stok = new FontAwesome.Sharp.IconButton();
             this.btn_tedarikci_detaylari = new FontAwesome.Sharp.IconButton();
@@ -45,6 +46,7 @@
             // panelNavigation
             // 
             this.panelNavigation.BackColor = System.Drawing.Color.White;
+            this.panelNavigation.Controls.Add(this.btn_kayitlar);
             this.panelNavigation.Controls.Add(this.btn_cikis);
             this.panelNavigation.Controls.Add(this.btn_stok);
             this.panelNavigation.Controls.Add(this.btn_tedarikci_detaylari);
@@ -56,6 +58,29 @@
             this.panelNavigation.Name = "panelNavigation";
             this.panelNavigation.Size = new System.Drawing.Size(230, 611);
             this.panelNavigation.TabIndex = 0;
+            // 
+            // btn_kayitlar
+            // 
+            this.btn_kayitlar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_kayitlar.FlatAppearance.BorderSize = 0;
+            this.btn_kayitlar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.GreenYellow;
+            this.btn_kayitlar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_kayitlar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_kayitlar.ForeColor = System.Drawing.Color.Green;
+            this.btn_kayitlar.IconChar = FontAwesome.Sharp.IconChar.StoreAlt;
+            this.btn_kayitlar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(252)))), ((int)(((byte)(76)))));
+            this.btn_kayitlar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_kayitlar.IconSize = 25;
+            this.btn_kayitlar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_kayitlar.Location = new System.Drawing.Point(0, 360);
+            this.btn_kayitlar.Name = "btn_kayitlar";
+            this.btn_kayitlar.Size = new System.Drawing.Size(230, 50);
+            this.btn_kayitlar.TabIndex = 6;
+            this.btn_kayitlar.Text = "  Kayıtlar";
+            this.btn_kayitlar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_kayitlar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_kayitlar.UseVisualStyleBackColor = true;
+            this.btn_kayitlar.Click += new System.EventHandler(this.btn_kayitlar_Click);
             // 
             // btn_cikis
             // 
@@ -242,5 +267,6 @@
         private FontAwesome.Sharp.IconButton btn_borc_odeme;
         private FontAwesome.Sharp.IconButton btn_satis;
         private Panel panelContainer;
+        private FontAwesome.Sharp.IconButton btn_kayitlar;
     }
 }

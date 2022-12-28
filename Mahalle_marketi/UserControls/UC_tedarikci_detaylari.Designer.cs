@@ -48,6 +48,7 @@
             this.labelTedarikciDetaylari.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelTedarikciDetaylari.AutoSize = true;
             this.labelTedarikciDetaylari.Font = new System.Drawing.Font("Calibri", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelTedarikciDetaylari.ForeColor = System.Drawing.Color.White;
             this.labelTedarikciDetaylari.Location = new System.Drawing.Point(163, 31);
             this.labelTedarikciDetaylari.Name = "labelTedarikciDetaylari";
             this.labelTedarikciDetaylari.Size = new System.Drawing.Size(329, 49);

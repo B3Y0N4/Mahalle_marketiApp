@@ -119,5 +119,12 @@ namespace Mahalle_marketi
         private void btn_cikis_Click(object sender, EventArgs e)
         {
         }
+
+        private void btn_kayitlar_Click(object sender, EventArgs e)
+        {
+            UC_kayitlar uc = new UC_kayitlar();
+            addUserControl(uc);
+            ActivateButton(sender);
+        }
     }
 }

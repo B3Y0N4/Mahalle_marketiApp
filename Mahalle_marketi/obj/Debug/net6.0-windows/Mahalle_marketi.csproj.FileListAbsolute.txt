@@ -43,3 +43,12 @@ C:\Users\OUSSAMA\Desktop\Mahalle_marketiApp\Mahalle_marketi\obj\Debug\net6.0-win
 C:\Users\OUSSAMA\Desktop\Mahalle_marketiApp\Mahalle_marketi\bin\Debug\net6.0-windows\Guna.UI2.dll
 C:\Users\OUSSAMA\Desktop\Mahalle_marketiApp\Mahalle_marketi\bin\Debug\net6.0-windows\System.Management.dll
 C:\Users\OUSSAMA\Desktop\Mahalle_marketiApp\Mahalle_marketi\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Management.dll
+C:\Users\OUSSAMA\Desktop\Mahalle_marketiApp\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.AddProductForm.resources
+C:\Users\OUSSAMA\Desktop\Mahalle_marketiApp\Mahalle_marketi\bin\Debug\net6.0-windows\Google.Protobuf.dll
+C:\Users\OUSSAMA\Desktop\Mahalle_marketiApp\Mahalle_marketi\bin\Debug\net6.0-windows\K4os.Compression.LZ4.dll
+C:\Users\OUSSAMA\Desktop\Mahalle_marketiApp\Mahalle_marketi\bin\Debug\net6.0-windows\K4os.Compression.LZ4.Streams.dll
+C:\Users\OUSSAMA\Desktop\Mahalle_marketiApp\Mahalle_marketi\bin\Debug\net6.0-windows\K4os.Hash.xxHash.dll
+C:\Users\OUSSAMA\Desktop\Mahalle_marketiApp\Mahalle_marketi\bin\Debug\net6.0-windows\MySql.Data.dll
+C:\Users\OUSSAMA\Desktop\Mahalle_marketiApp\Mahalle_marketi\bin\Debug\net6.0-windows\ZstdNet.dll
+C:\Users\OUSSAMA\Desktop\Mahalle_marketiApp\Mahalle_marketi\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
+C:\Users\OUSSAMA\Desktop\Mahalle_marketiApp\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.UserControls.UC_kayitlar.resources

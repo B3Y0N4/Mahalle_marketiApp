@@ -48,6 +48,7 @@
             this.labelBorcOdeme.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelBorcOdeme.AutoSize = true;
             this.labelBorcOdeme.Font = new System.Drawing.Font("Calibri", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelBorcOdeme.ForeColor = System.Drawing.Color.White;
             this.labelBorcOdeme.Location = new System.Drawing.Point(214, 31);
             this.labelBorcOdeme.Name = "labelBorcOdeme";
             this.labelBorcOdeme.Size = new System.Drawing.Size(226, 49);
