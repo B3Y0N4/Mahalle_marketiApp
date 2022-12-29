@@ -248,6 +248,7 @@
             this.Controls.Add(this.panelNavigation);
             this.MinimumSize = new System.Drawing.Size(900, 650);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Market Sistem yönetimi";
             this.panelNavigation.ResumeLayout(false);
             this.panelMarket.ResumeLayout(false);

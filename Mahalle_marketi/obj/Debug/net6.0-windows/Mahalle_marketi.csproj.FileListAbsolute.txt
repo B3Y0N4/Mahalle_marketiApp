@@ -52,3 +52,4 @@ C:\Users\OUSSAMA\Desktop\Mahalle_marketiApp\Mahalle_marketi\bin\Debug\net6.0-win
 C:\Users\OUSSAMA\Desktop\Mahalle_marketiApp\Mahalle_marketi\bin\Debug\net6.0-windows\ZstdNet.dll
 C:\Users\OUSSAMA\Desktop\Mahalle_marketiApp\Mahalle_marketi\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
 C:\Users\OUSSAMA\Desktop\Mahalle_marketiApp\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.UserControls.UC_kayitlar.resources
+C:\Users\OUSSAMA\Desktop\Mahalle_marketiApp\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.satis_miktari_guncelle.resources

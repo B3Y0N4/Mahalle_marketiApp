@@ -19,10 +19,6 @@ namespace Mahalle_marketi
             InitializeComponent();
         }
         
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void AddProductForm_Load(object sender, EventArgs e)
         {
@@ -36,6 +32,11 @@ namespace Mahalle_marketi
                 MessageBox.Show("Ürün Barkodu alanı boş bırakılmamalı");
                 return;
             }
+            if (textBox_urunBarkodu.Text.Contains(' '))
+            {
+                MessageBox.Show("Ürün Barkodu alanında boşluk bırakılmamalı");
+                return;
+            }
             if (!DbUrun.check_urunBk_availability(Int32.Parse(textBox_urunBarkodu.Text.Trim())))
             {
                 MessageBox.Show("Bu barkod, stokta hiçbir ürüne ait değil");
@@ -44,8 +45,9 @@ namespace Mahalle_marketi
 
             urun_Bk = Int32.Parse(textBox_urunBarkodu.Text.Trim());
             miktar = Int32.Parse(ComboBoxAdet.Text.Trim());
-                
+
             this.Close();
+
 
 
 
