@@ -126,5 +126,7 @@ namespace Mahalle_marketi
             addUserControl(uc);
             ActivateButton(sender);
         }
+
+        
     }
 }

@@ -26,6 +26,7 @@ namespace Mahalle_marketi.UserControls
         private void UC_satis_Load(object sender, EventArgs e)
         {
             comboBoxSatis.SelectedIndex = 0;
+            panel_tumunuSil.Visible = false;
         }
 
         private void comboBoxSatis_SelectedIndexChanged(object sender, EventArgs e)
@@ -34,6 +35,7 @@ namespace Mahalle_marketi.UserControls
             {
                 textBoxIsim.Visible = false;
                 labelisimSoyisim.Visible = false;
+                textBoxIsim.Text = "";
             }
             else
             {
@@ -64,9 +66,14 @@ namespace Mahalle_marketi.UserControls
             Ürün urun = DbUrun.find_urunByBk(urun_Bk);
             if (urun != null)
             {
+                if (DataGridViewSatisEkrani.Rows.Count == 0)
+                {
+                    panel_tumunuSil.Visible = true;
+                }
                 var tutar = miktar * urun.Urun_satisFiyati;
                 DataGridViewSatisEkrani.Rows.Add(urun.Urun_barKd, urun.Urun_adi, miktar, urun.Urun_miktarBirimi, urun.Urun_satisFiyati, tutar);
                 toplam_tutari_guncelle();
+                
             }
 
 
@@ -93,8 +100,71 @@ namespace Mahalle_marketi.UserControls
             if (e.ColumnIndex == 7)
             {
                 DataGridViewSatisEkrani.Rows.RemoveAt(DataGridViewSatisEkrani.SelectedRows[0].Index);
+                if (DataGridViewSatisEkrani.Rows.Count == 0)
+                {
+                    panel_tumunuSil.Visible = false;
+                }
                 toplam_tutari_guncelle();
             }
+        }
+
+        private void bilgileriSifirla()
+        {
+            labelToplamTutar.Text = "0.00 ₺";
+            textBoxIsim.Text = "";
+            comboBoxSatis.SelectedIndex = 0;
+            DataGridViewSatisEkrani.Rows.Clear();
+            toplam_tutar = 0;
+            panel_tumunuSil.Visible = false;
+
+        }
+
+        private void btn_satisiOnayla_Click(object sender, EventArgs e)
+        {
+            if (toplam_tutar == 0)
+            {
+                MessageBox.Show("Ürün eklemeniz gerekmektedir", "Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (comboBoxSatis.Text == "Cari satış")
+            {
+                if (textBoxIsim.Text.Length == 0)
+                {
+                    MessageBox.Show("İsim ve Soyisim alanı boş bırakılmamalı", "Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (!textBoxIsim.Text.Contains(' '))
+                {
+                    MessageBox.Show("İsim ve Soyisim alanında müşterinin tam adını yazınız", "Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
+
+
+            DateTime dateTime = DateTime.Now;
+            int odenen = comboBoxSatis.Text == "Cari satış" ? 0 : toplam_tutar;
+            int borc = comboBoxSatis.Text == "Cari satış" ? toplam_tutar : 0;
+            string id =  IdGenerator.NewId();
+            Satış satis = new Satış(id, textBoxIsim.Text, toplam_tutar, odenen, borc, dateTime);
+            try
+            {
+                DbSatis.satis_ekle(satis);
+            }
+            catch
+            {
+                throw;
+            }
+            
+            bilgileriSifirla();
+        }
+
+        private void btn_tumunuSil_Click(object sender, EventArgs e)
+        {
+            DataGridViewSatisEkrani.Rows.Clear();
+            labelToplamTutar.Text = "0.00 ₺";
+            toplam_tutar = 0;
+            panel_tumunuSil.Visible = false;
+
         }
     }
 }

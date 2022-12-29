@@ -67,7 +67,7 @@
             this.btn_kayitlar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_kayitlar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_kayitlar.ForeColor = System.Drawing.Color.Green;
-            this.btn_kayitlar.IconChar = FontAwesome.Sharp.IconChar.StoreAlt;
+            this.btn_kayitlar.IconChar = FontAwesome.Sharp.IconChar.History;
             this.btn_kayitlar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(252)))), ((int)(((byte)(76)))));
             this.btn_kayitlar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_kayitlar.IconSize = 25;

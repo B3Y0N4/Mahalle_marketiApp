@@ -45,14 +45,17 @@
             this.PanelSatis = new System.Windows.Forms.Panel();
             this.labelSatis = new System.Windows.Forms.Label();
             this.panelSatisTuru = new System.Windows.Forms.Panel();
+            this.panel_satisTuru = new System.Windows.Forms.Panel();
             this.labelSatisTuru = new System.Windows.Forms.Label();
             this.comboBoxSatis = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.panel_tumunuSil = new System.Windows.Forms.Panel();
+            this.btn_tumunuSil = new FontAwesome.Sharp.IconButton();
             this.btn_urun_ekle = new Guna.UI2.WinForms.Guna2Button();
             this.textBoxIsim = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_satisiOnayla = new Guna.UI2.WinForms.Guna2Button();
             this.labelToplamTutar = new System.Windows.Forms.Label();
             this.labelToplam = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -71,6 +74,8 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.PanelSatis.SuspendLayout();
             this.panelSatisTuru.SuspendLayout();
+            this.panel_satisTuru.SuspendLayout();
+            this.panel_tumunuSil.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewSatisEkrani)).BeginInit();
@@ -102,8 +107,8 @@
             // panelSatisTuru
             // 
             this.panelSatisTuru.BackColor = System.Drawing.Color.White;
-            this.panelSatisTuru.Controls.Add(this.labelSatisTuru);
-            this.panelSatisTuru.Controls.Add(this.comboBoxSatis);
+            this.panelSatisTuru.Controls.Add(this.panel_satisTuru);
+            this.panelSatisTuru.Controls.Add(this.panel_tumunuSil);
             this.panelSatisTuru.Controls.Add(this.btn_urun_ekle);
             this.panelSatisTuru.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSatisTuru.Location = new System.Drawing.Point(0, 110);
@@ -111,13 +116,23 @@
             this.panelSatisTuru.Size = new System.Drawing.Size(654, 50);
             this.panelSatisTuru.TabIndex = 1;
             // 
+            // panel_satisTuru
+            // 
+            this.panel_satisTuru.Controls.Add(this.labelSatisTuru);
+            this.panel_satisTuru.Controls.Add(this.comboBoxSatis);
+            this.panel_satisTuru.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel_satisTuru.Location = new System.Drawing.Point(230, 0);
+            this.panel_satisTuru.Name = "panel_satisTuru";
+            this.panel_satisTuru.Size = new System.Drawing.Size(273, 50);
+            this.panel_satisTuru.TabIndex = 4;
+            // 
             // labelSatisTuru
             // 
             this.labelSatisTuru.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelSatisTuru.AutoSize = true;
             this.labelSatisTuru.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelSatisTuru.Location = new System.Drawing.Point(413, 15);
+            this.labelSatisTuru.Location = new System.Drawing.Point(17, 15);
             this.labelSatisTuru.Name = "labelSatisTuru";
             this.labelSatisTuru.Size = new System.Drawing.Size(83, 21);
             this.labelSatisTuru.TabIndex = 3;
@@ -125,7 +140,8 @@
             // 
             // comboBoxSatis
             // 
-            this.comboBoxSatis.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.comboBoxSatis.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxSatis.BackColor = System.Drawing.Color.WhiteSmoke;
             this.comboBoxSatis.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.comboBoxSatis.CustomizableEdges = customizableEdges1;
@@ -139,12 +155,43 @@
             this.comboBoxSatis.Items.AddRange(new object[] {
             "Peşin satış",
             "Cari satış"});
-            this.comboBoxSatis.Location = new System.Drawing.Point(502, 7);
+            this.comboBoxSatis.Location = new System.Drawing.Point(106, 7);
             this.comboBoxSatis.Name = "comboBoxSatis";
             this.comboBoxSatis.ShadowDecoration.CustomizableEdges = customizableEdges2;
             this.comboBoxSatis.Size = new System.Drawing.Size(140, 36);
             this.comboBoxSatis.TabIndex = 2;
             this.comboBoxSatis.SelectedIndexChanged += new System.EventHandler(this.comboBoxSatis_SelectedIndexChanged);
+            // 
+            // panel_tumunuSil
+            // 
+            this.panel_tumunuSil.Controls.Add(this.btn_tumunuSil);
+            this.panel_tumunuSil.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel_tumunuSil.Location = new System.Drawing.Point(503, 0);
+            this.panel_tumunuSil.Name = "panel_tumunuSil";
+            this.panel_tumunuSil.Size = new System.Drawing.Size(151, 50);
+            this.panel_tumunuSil.TabIndex = 3;
+            // 
+            // btn_tumunuSil
+            // 
+            this.btn_tumunuSil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_tumunuSil.BackColor = System.Drawing.Color.IndianRed;
+            this.btn_tumunuSil.FlatAppearance.BorderSize = 0;
+            this.btn_tumunuSil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_tumunuSil.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_tumunuSil.ForeColor = System.Drawing.Color.White;
+            this.btn_tumunuSil.IconChar = FontAwesome.Sharp.IconChar.Trash;
+            this.btn_tumunuSil.IconColor = System.Drawing.Color.White;
+            this.btn_tumunuSil.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_tumunuSil.IconSize = 23;
+            this.btn_tumunuSil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_tumunuSil.Location = new System.Drawing.Point(11, 8);
+            this.btn_tumunuSil.Name = "btn_tumunuSil";
+            this.btn_tumunuSil.Size = new System.Drawing.Size(122, 35);
+            this.btn_tumunuSil.TabIndex = 4;
+            this.btn_tumunuSil.Text = " Tümünü Sil";
+            this.btn_tumunuSil.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btn_tumunuSil.UseVisualStyleBackColor = false;
+            this.btn_tumunuSil.Click += new System.EventHandler(this.btn_tumunuSil_Click);
             // 
             // btn_urun_ekle
             // 
@@ -200,7 +247,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Controls.Add(this.guna2Button1);
+            this.panel5.Controls.Add(this.btn_satisiOnayla);
             this.panel5.Controls.Add(this.labelToplamTutar);
             this.panel5.Controls.Add(this.labelToplam);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -209,25 +256,26 @@
             this.panel5.Size = new System.Drawing.Size(654, 70);
             this.panel5.TabIndex = 6;
             // 
-            // guna2Button1
+            // btn_satisiOnayla
             // 
-            this.guna2Button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btn_satisiOnayla.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.guna2Button1.BorderRadius = 20;
-            this.guna2Button1.CustomizableEdges = customizableEdges5;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(21, 12);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            this.guna2Button1.Size = new System.Drawing.Size(234, 46);
-            this.guna2Button1.TabIndex = 2;
-            this.guna2Button1.Text = "Satışı Onayla";
+            this.btn_satisiOnayla.BorderRadius = 20;
+            this.btn_satisiOnayla.CustomizableEdges = customizableEdges5;
+            this.btn_satisiOnayla.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_satisiOnayla.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_satisiOnayla.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_satisiOnayla.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_satisiOnayla.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_satisiOnayla.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_satisiOnayla.ForeColor = System.Drawing.Color.White;
+            this.btn_satisiOnayla.Location = new System.Drawing.Point(21, 12);
+            this.btn_satisiOnayla.Name = "btn_satisiOnayla";
+            this.btn_satisiOnayla.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            this.btn_satisiOnayla.Size = new System.Drawing.Size(234, 46);
+            this.btn_satisiOnayla.TabIndex = 2;
+            this.btn_satisiOnayla.Text = "Satışı Onayla";
+            this.btn_satisiOnayla.Click += new System.EventHandler(this.btn_satisiOnayla_Click);
             // 
             // labelToplamTutar
             // 
@@ -439,6 +487,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 160);
             this.panel2.Name = "panel2";
@@ -447,6 +496,7 @@
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 170);
             this.panel3.Name = "panel3";
@@ -468,7 +518,9 @@
             this.PanelSatis.ResumeLayout(false);
             this.PanelSatis.PerformLayout();
             this.panelSatisTuru.ResumeLayout(false);
-            this.panelSatisTuru.PerformLayout();
+            this.panel_satisTuru.ResumeLayout(false);
+            this.panel_satisTuru.PerformLayout();
+            this.panel_tumunuSil.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -506,8 +558,11 @@
         private Panel panel4;
         private Panel panel5;
         private Panel panel7;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btn_satisiOnayla;
         private Label labelToplamTutar;
         private Label labelToplam;
+        private FontAwesome.Sharp.IconButton btn_tumunuSil;
+        private Panel panel_satisTuru;
+        private Panel panel_tumunuSil;
     }
 }

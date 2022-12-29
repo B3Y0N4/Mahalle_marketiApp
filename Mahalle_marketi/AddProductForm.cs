@@ -29,17 +29,17 @@ namespace Mahalle_marketi
         {
             if (textBox_urunBarkodu.Text.Trim().Length == 0)
             {
-                MessageBox.Show("Ürün Barkodu alanı boş bırakılmamalı");
+                MessageBox.Show("Ürün Barkodu alanı boş bırakılmamalı", "Info" ,MessageBoxButtons.OK,MessageBoxIcon.Error);
                 return;
             }
             if (textBox_urunBarkodu.Text.Contains(' '))
             {
-                MessageBox.Show("Ürün Barkodu alanında boşluk bırakılmamalı");
+                MessageBox.Show("Ürün Barkodu alanında boşluk bırakılmamalı", "Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             if (!DbUrun.check_urunBk_availability(Int32.Parse(textBox_urunBarkodu.Text.Trim())))
             {
-                MessageBox.Show("Bu barkod, stokta hiçbir ürüne ait değil");
+                MessageBox.Show("Bu barkod, stokta hiçbir ürüne ait değil", "Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 

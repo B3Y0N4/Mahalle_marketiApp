@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Documents;
 
 namespace Mahalle_marketi
 {
@@ -20,7 +21,7 @@ namespace Mahalle_marketi
             }
             catch(MySqlException ex)
             {
-                MessageBox.Show("MySQL Connection! \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("MySQL bağlantısı kurulmadı! \n" + ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
             return con;
@@ -33,6 +34,18 @@ namespace Mahalle_marketi
             MySqlCommand cmd = new MySqlCommand(sql, con);
             cmd.CommandType = System.Data.CommandType.Text;
             cmd.Parameters.Add("@urun_Bk", MySqlDbType.Int32).Value = id;
+
+            try
+            {
+                cmd.ExecuteNonQuery();
+
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Internet bağlantısını kontrol ediniz! \n" + ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
 
             var reader = cmd.ExecuteReader();
             if (reader.Read())
@@ -54,10 +67,22 @@ namespace Mahalle_marketi
             cmd.CommandType = System.Data.CommandType.Text;
             cmd.Parameters.Add("@urun_Bk", MySqlDbType.Int32).Value = id;
 
+            try
+            {
+                cmd.ExecuteNonQuery();
+                
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Internet bağlantısını kontrol ediniz! \n" + ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
+
             var reader = cmd.ExecuteReader();
             if (reader.Read())
             {
-                Ürün urun = new Ürün(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetInt32(4) , reader.GetString(3), reader.GetInt32(5), reader.GetInt32(6));
+                Ürün urun = new Ürün(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetInt32(4), reader.GetString(3), reader.GetInt32(5), reader.GetInt32(6));
                 con.Close();
                 return urun;
             }
@@ -66,6 +91,8 @@ namespace Mahalle_marketi
                 con.Close();
                 return null;
             }
+
+
 
         }
     }
