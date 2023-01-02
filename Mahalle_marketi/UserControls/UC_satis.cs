@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,8 @@ namespace Mahalle_marketi.UserControls
     public partial class UC_satis : UserControl
     {
         
+        private String kullanici_adi;
+        private String kullanici_sifresi;
         public static int urun_Bk;
         public static int miktar;
         public int guncellenmesi_istenen_miktar;
@@ -21,7 +24,10 @@ namespace Mahalle_marketi.UserControls
 
         public UC_satis()
         {
-            InitializeComponent(); 
+            InitializeComponent();
+            kullanici_adi = kullanici.kullanici_adi;
+            kullanici_sifresi = kullanici.kullanici_sifresi;
+
         }
         private void UC_satis_Load(object sender, EventArgs e)
         {
@@ -56,28 +62,55 @@ namespace Mahalle_marketi.UserControls
 
         private void btn_urun_ekle_Click(object sender, EventArgs e)
         {
-
             AddProductForm urunEkle_ekrani = new AddProductForm();
             urunEkle_ekrani.ShowDialog();
 
             urun_Bk = urunEkle_ekrani.urun_Bk;
             miktar = urunEkle_ekrani.miktar;
 
-            Ürün urun = DbUrun.find_urunByBk(urun_Bk);
-            if (urun != null)
+            if (DataGridViewSatisEkrani.Rows.Count != 0)
             {
-                if (DataGridViewSatisEkrani.Rows.Count == 0)
+                foreach (DataGridViewRow row in DataGridViewSatisEkrani.Rows)
                 {
-                    panel_tumunuSil.Visible = true;
+                    if((int)DataGridViewSatisEkrani.Rows[row.Index].Cells[0].Value == urun_Bk)
+                    {
+                        if ((int)DataGridViewSatisEkrani.Rows[row.Index].Cells[2].Value + miktar <= 10)
+                        {
+                            DataGridViewSatisEkrani.Rows[row.Index].Cells[2].Value = (int)DataGridViewSatisEkrani.Rows[row.Index].Cells[2].Value + miktar;
+                            DataGridViewSatisEkrani.Rows[row.Index].Cells[5].Value = (int)DataGridViewSatisEkrani.Rows[row.Index].Cells[2].Value * (int)DataGridViewSatisEkrani.Rows[row.Index].Cells[4].Value;
+                            toplam_tutari_guncelle();
+                            return;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Bir üründen en fazla 10 tane alabilirsiniz\n", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
+
+                        }
+
+                    }
                 }
-                var tutar = miktar * urun.Urun_satisFiyati;
-                DataGridViewSatisEkrani.Rows.Add(urun.Urun_barKd, urun.Urun_adi, miktar, urun.Urun_miktarBirimi, urun.Urun_satisFiyati, tutar);
-                toplam_tutari_guncelle();
-                
             }
+            try
+            {
+                Ürün urun = DbUrun.find_urunByBk(urun_Bk);
+                if (urun != null)
+                {
+                    if (DataGridViewSatisEkrani.Rows.Count == 0)
+                    {
+                        panel_tumunuSil.Visible = true;
+                    }
+                    var tutar = miktar * urun.Urun_satisFiyati;
+                    DataGridViewSatisEkrani.Rows.Add(urun.Urun_barKd, urun.Urun_adi, miktar, urun.Urun_miktarBirimi, urun.Urun_satisFiyati, tutar);
+                    toplam_tutari_guncelle();
 
-
-
+                }
+            }
+            catch
+            {
+                return;
+            }
+            
         }
 
         private void DataGridViewSatisEkrani_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -146,15 +179,38 @@ namespace Mahalle_marketi.UserControls
             int borc = comboBoxSatis.Text == "Cari satış" ? toplam_tutar : 0;
             string id =  IdGenerator.NewId();
             Satış satis = new Satış(id, textBoxIsim.Text, toplam_tutar, odenen, borc, dateTime);
+            
             try
             {
                 DbSatis.satis_ekle(satis);
+                SatisUrun satisUrun;
+                int urun_bk;
+                String urun_adi;
+                int urun_miktari;
+                int urun_toplam_tutari;
+                int urun_odenen_miktari;
+                int urun_borc_miktari;
+
+                foreach (DataGridViewRow row in DataGridViewSatisEkrani.Rows)
+                {
+                    urun_bk = (int)DataGridViewSatisEkrani.Rows[row.Index].Cells[0].Value;
+                    urun_adi = (String)DataGridViewSatisEkrani.Rows[row.Index].Cells[1].Value;
+                    urun_miktari = (int)DataGridViewSatisEkrani.Rows[row.Index].Cells[2].Value;
+                    urun_toplam_tutari = (int)DataGridViewSatisEkrani.Rows[row.Index].Cells[5].Value;
+                    urun_odenen_miktari = comboBoxSatis.Text == "Cari satış" ? 0 : urun_toplam_tutari;
+                    urun_borc_miktari = comboBoxSatis.Text == "Cari satış" ? urun_toplam_tutari : 0;
+                    satisUrun = new SatisUrun(id, urun_bk, textBoxIsim.Text, urun_adi, urun_miktari, urun_toplam_tutari, urun_odenen_miktari, urun_borc_miktari, dateTime);
+                    DbSatisUrun.satisUrun_ekle(satisUrun);
+
+                }
+                
             }
             catch
             {
-                throw;
+                return;
+
             }
-            
+
             bilgileriSifirla();
         }
 

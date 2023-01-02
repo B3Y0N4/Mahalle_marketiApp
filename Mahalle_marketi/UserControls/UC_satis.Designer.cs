@@ -60,6 +60,10 @@
             this.labelToplam = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.DataGridViewSatisEkrani = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.labelisimSoyisim = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,10 +72,6 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guncelle = new System.Windows.Forms.DataGridViewButtonColumn();
             this.sil = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.labelisimSoyisim = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.PanelSatis.SuspendLayout();
             this.panelSatisTuru.SuspendLayout();
             this.panel_satisTuru.SuspendLayout();
@@ -395,76 +395,6 @@
             this.DataGridViewSatisEkrani.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.DataGridViewSatisEkrani.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewSatisEkrani_CellContentClick);
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Ürün BarKd";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Column2.HeaderText = "Ürün Adı";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "miktar";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "birim";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Fıyat";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Tutar";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // guncelle
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.guncelle.DefaultCellStyle = dataGridViewCellStyle4;
-            this.guncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.guncelle.HeaderText = "";
-            this.guncelle.Name = "guncelle";
-            this.guncelle.ReadOnly = true;
-            this.guncelle.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.guncelle.Text = "Güncelle";
-            this.guncelle.UseColumnTextForButtonValue = true;
-            // 
-            // sil
-            // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Red;
-            this.sil.DefaultCellStyle = dataGridViewCellStyle5;
-            this.sil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sil.HeaderText = "";
-            this.sil.Name = "sil";
-            this.sil.ReadOnly = true;
-            this.sil.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.sil.Text = "Sil";
-            this.sil.UseColumnTextForButtonValue = true;
-            // 
             // panel6
             // 
             this.panel6.Controls.Add(this.textBoxIsim);
@@ -502,6 +432,82 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(10, 441);
             this.panel3.TabIndex = 4;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Ürün BarKd";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column2
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Column2.HeaderText = "Ürün Adı";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "miktar";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            this.Column8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "birim";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Fıyat";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Tutar";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // guncelle
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.guncelle.DefaultCellStyle = dataGridViewCellStyle4;
+            this.guncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.guncelle.HeaderText = "";
+            this.guncelle.Name = "guncelle";
+            this.guncelle.ReadOnly = true;
+            this.guncelle.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.guncelle.Text = "Güncelle";
+            this.guncelle.UseColumnTextForButtonValue = true;
+            // 
+            // sil
+            // 
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Red;
+            this.sil.DefaultCellStyle = dataGridViewCellStyle5;
+            this.sil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sil.HeaderText = "";
+            this.sil.Name = "sil";
+            this.sil.ReadOnly = true;
+            this.sil.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.sil.Text = "Sil";
+            this.sil.UseColumnTextForButtonValue = true;
             // 
             // UC_satis
             // 
@@ -547,14 +553,6 @@
         private Panel panel6;
         private Panel panel3;
         private Guna.UI2.WinForms.Guna2DataGridView DataGridViewSatisEkrani;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column8;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
-        private DataGridViewTextBoxColumn Column5;
-        private DataGridViewButtonColumn guncelle;
-        private DataGridViewButtonColumn sil;
         private Panel panel4;
         private Panel panel5;
         private Panel panel7;
@@ -564,5 +562,13 @@
         private FontAwesome.Sharp.IconButton btn_tumunuSil;
         private Panel panel_satisTuru;
         private Panel panel_tumunuSil;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column8;
+        private DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn Column4;
+        private DataGridViewTextBoxColumn Column5;
+        private DataGridViewButtonColumn guncelle;
+        private DataGridViewButtonColumn sil;
     }
 }

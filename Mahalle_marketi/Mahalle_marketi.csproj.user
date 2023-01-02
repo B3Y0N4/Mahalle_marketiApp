@@ -7,7 +7,13 @@
     <Compile Update="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Giris_sayfasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="satis_miktari_guncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Satis_urun_silme.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="UserControls\UC_borc_odeme.cs">
@@ -19,10 +25,22 @@
     <Compile Update="UserControls\UC_satis.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="UserControls\UC_satisKayitlari.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="UserControls\UC_Stok.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="UserControls\UC_stokGirisi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="UserControls\UC_tedarikci_detaylari.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControls\UC_urunKayitlari.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControls\UC_urunler.cs">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>

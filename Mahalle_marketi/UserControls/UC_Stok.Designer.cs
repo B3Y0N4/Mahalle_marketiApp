@@ -37,6 +37,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_stok_girisi = new Guna.UI2.WinForms.Guna2Button();
             this.btn_urunler = new Guna.UI2.WinForms.Guna2Button();
+            this.panel_stok = new System.Windows.Forms.Panel();
             this.PanelStok.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -89,13 +90,14 @@
             this.btn_stok_girisi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_stok_girisi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btn_stok_girisi.HoverState.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_stok_girisi.Location = new System.Drawing.Point(163, 0);
+            this.btn_stok_girisi.Location = new System.Drawing.Point(170, 0);
             this.btn_stok_girisi.Name = "btn_stok_girisi";
             this.btn_stok_girisi.PressedColor = System.Drawing.Color.GreenYellow;
             this.btn_stok_girisi.ShadowDecoration.CustomizableEdges = customizableEdges2;
             this.btn_stok_girisi.Size = new System.Drawing.Size(157, 50);
             this.btn_stok_girisi.TabIndex = 6;
             this.btn_stok_girisi.Text = "Stok Girişi";
+            this.btn_stok_girisi.Click += new System.EventHandler(this.btn_stok_girisi_Click);
             // 
             // btn_urunler
             // 
@@ -109,22 +111,33 @@
             this.btn_urunler.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_urunler.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btn_urunler.HoverState.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_urunler.Location = new System.Drawing.Point(0, 0);
+            this.btn_urunler.Location = new System.Drawing.Point(7, 0);
             this.btn_urunler.Name = "btn_urunler";
             this.btn_urunler.PressedColor = System.Drawing.Color.GreenYellow;
             this.btn_urunler.ShadowDecoration.CustomizableEdges = customizableEdges4;
             this.btn_urunler.Size = new System.Drawing.Size(157, 50);
             this.btn_urunler.TabIndex = 5;
             this.btn_urunler.Text = "Ürünler";
+            this.btn_urunler.Click += new System.EventHandler(this.btn_urunler_Click);
+            // 
+            // panel_stok
+            // 
+            this.panel_stok.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_stok.Location = new System.Drawing.Point(0, 160);
+            this.panel_stok.Name = "panel_stok";
+            this.panel_stok.Size = new System.Drawing.Size(654, 451);
+            this.panel_stok.TabIndex = 5;
             // 
             // UC_Stok
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.panel_stok);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.PanelStok);
             this.Name = "UC_Stok";
             this.Size = new System.Drawing.Size(654, 611);
+            this.Load += new System.EventHandler(this.UC_Stok_Load);
             this.PanelStok.ResumeLayout(false);
             this.PanelStok.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -139,5 +152,6 @@
         private Panel panel1;
         private Guna.UI2.WinForms.Guna2Button btn_stok_girisi;
         private Guna.UI2.WinForms.Guna2Button btn_urunler;
+        private Panel panel_stok;
     }
 }

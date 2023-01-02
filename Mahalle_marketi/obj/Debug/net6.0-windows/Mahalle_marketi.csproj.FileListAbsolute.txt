@@ -53,3 +53,9 @@ C:\Users\OUSSAMA\Desktop\Mahalle_marketiApp\Mahalle_marketi\bin\Debug\net6.0-win
 C:\Users\OUSSAMA\Desktop\Mahalle_marketiApp\Mahalle_marketi\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
 C:\Users\OUSSAMA\Desktop\Mahalle_marketiApp\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.UserControls.UC_kayitlar.resources
 C:\Users\OUSSAMA\Desktop\Mahalle_marketiApp\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.satis_miktari_guncelle.resources
+C:\Users\OUSSAMA\Desktop\Mahalle_marketiApp\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.UserControls.UC_satisKayitlari.resources
+C:\Users\OUSSAMA\Desktop\Mahalle_marketiApp\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.UserControls.UC_urunKayitlari.resources
+C:\Users\OUSSAMA\Desktop\Mahalle_marketiApp\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.UserControls.UC_stokGirisi.resources
+C:\Users\OUSSAMA\Desktop\Mahalle_marketiApp\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.UserControls.UC_urunler.resources
+C:\Users\OUSSAMA\Desktop\Mahalle_marketiApp\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.Satis_urun_silme.resources
+C:\Users\OUSSAMA\Desktop\Mahalle_marketiApp\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.Giris_sayfasi.resources

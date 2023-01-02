@@ -1,11 +1,12 @@
-using FontAwesome.Sharp;
+﻿using FontAwesome.Sharp;
 using Mahalle_marketi.UserControls;
+using System.Threading;
 
 namespace Mahalle_marketi
 {
     public partial class Form1 : Form
     {
-        
+        Thread th;
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         bool highlightSatisButton = true;
@@ -70,17 +71,17 @@ namespace Mahalle_marketi
         {
             if (!highlightSatisButton)
             {
-                btn_satis.ForeColor = Color.Green;
+                btn_satis.ForeColor = Color.PaleGoldenrod;
                 btn_satis.TextAlign = ContentAlignment.MiddleLeft;
-                btn_satis.IconColor = Color.FromArgb(128, 252, 76);
+                btn_satis.IconColor = Color.PaleGoldenrod;
                 btn_satis.TextImageRelation = TextImageRelation.ImageBeforeText;
                 btn_satis.ImageAlign = ContentAlignment.MiddleLeft;
             }
             if (currentBtn != null)
             {
-                currentBtn.ForeColor = Color.Green;
+                currentBtn.ForeColor = Color.PaleGoldenrod;
                 currentBtn.TextAlign = ContentAlignment.MiddleLeft;
-                currentBtn.IconColor = Color.FromArgb(128, 252, 76);
+                currentBtn.IconColor = Color.PaleGoldenrod;
                 currentBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
                 currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
             }
@@ -118,6 +119,20 @@ namespace Mahalle_marketi
 
         private void btn_cikis_Click(object sender, EventArgs e)
         {
+            if (MessageBox.Show("Giriş yapmak istediğinizden emin misiniz", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                kullanici.kullanici_adi = "";
+                kullanici.kullanici_sifresi = "";
+                this.Close();
+                th = new Thread(openNewForm);
+                th.SetApartmentState(ApartmentState.STA);
+                th.Start();
+            }
+        }
+
+        private void openNewForm(object obj)
+        {
+            Application.Run(new Giris_sayfasi());
         }
 
         private void btn_kayitlar_Click(object sender, EventArgs e)

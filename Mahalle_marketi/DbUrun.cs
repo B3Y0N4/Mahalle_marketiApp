@@ -27,13 +27,14 @@ namespace Mahalle_marketi
             return con;
         }
 
-        public static bool check_urunBk_availability(int id)
+        public static bool check_urunBk_availability(int barkodu)
         {
-            string sql = "select Ükodu from ürünler where Ükodu = @urun_Bk";
+            string sql = "select Ükodu from ürünler where Ükodu = @urun_Bk and kullaniciAdi = @kullanici_adi";
             MySqlConnection con = GetConnection();
             MySqlCommand cmd = new MySqlCommand(sql, con);
             cmd.CommandType = System.Data.CommandType.Text;
-            cmd.Parameters.Add("@urun_Bk", MySqlDbType.Int32).Value = id;
+            cmd.Parameters.Add("@urun_Bk", MySqlDbType.Int32).Value = barkodu;
+            cmd.Parameters.Add("@kullanici_adi", MySqlDbType.String).Value = kullanici.kullanici_adi;
 
             try
             {
@@ -60,12 +61,13 @@ namespace Mahalle_marketi
             }
         }
 
-        public static Ürün find_urunByBk(int id) {
-            string sql = "select * from ürünler where Ükodu = @urun_Bk";
+        public static Ürün find_urunByBk(int barkodu) {
+            string sql = "select * from ürünler where Ükodu = @urun_Bk and kullaniciAdi = @kullanici_adi";
             MySqlConnection con = GetConnection();
             MySqlCommand cmd = new MySqlCommand(sql, con);
             cmd.CommandType = System.Data.CommandType.Text;
-            cmd.Parameters.Add("@urun_Bk", MySqlDbType.Int32).Value = id;
+            cmd.Parameters.Add("@urun_Bk", MySqlDbType.Int32).Value = barkodu;
+            cmd.Parameters.Add("@kullanici_adi", MySqlDbType.String).Value = kullanici.kullanici_adi;
 
             try
             {
@@ -82,7 +84,7 @@ namespace Mahalle_marketi
             var reader = cmd.ExecuteReader();
             if (reader.Read())
             {
-                Ürün urun = new Ürün(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetInt32(4), reader.GetString(3), reader.GetInt32(5), reader.GetInt32(6));
+                Ürün urun = new Ürün(reader.GetInt32(1), reader.GetString(2), reader.GetString(3), reader.GetInt32(5), reader.GetString(4), reader.GetInt32(6), reader.GetInt32(7));
                 con.Close();
                 return urun;
             }

@@ -36,7 +36,6 @@
             this.btn_borc_odeme = new FontAwesome.Sharp.IconButton();
             this.btn_satis = new FontAwesome.Sharp.IconButton();
             this.panelMarket = new System.Windows.Forms.Panel();
-            this.labelSeparator = new System.Windows.Forms.Label();
             this.panel_basket = new System.Windows.Forms.Panel();
             this.panelContainer = new System.Windows.Forms.Panel();
             this.panelNavigation.SuspendLayout();
@@ -45,7 +44,7 @@
             // 
             // panelNavigation
             // 
-            this.panelNavigation.BackColor = System.Drawing.Color.White;
+            this.panelNavigation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.panelNavigation.Controls.Add(this.btn_kayitlar);
             this.panelNavigation.Controls.Add(this.btn_cikis);
             this.panelNavigation.Controls.Add(this.btn_stok);
@@ -66,9 +65,9 @@
             this.btn_kayitlar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.GreenYellow;
             this.btn_kayitlar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_kayitlar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_kayitlar.ForeColor = System.Drawing.Color.Green;
+            this.btn_kayitlar.ForeColor = System.Drawing.Color.PaleGoldenrod;
             this.btn_kayitlar.IconChar = FontAwesome.Sharp.IconChar.History;
-            this.btn_kayitlar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(252)))), ((int)(((byte)(76)))));
+            this.btn_kayitlar.IconColor = System.Drawing.Color.PaleGoldenrod;
             this.btn_kayitlar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_kayitlar.IconSize = 25;
             this.btn_kayitlar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -89,9 +88,9 @@
             this.btn_cikis.FlatAppearance.MouseDownBackColor = System.Drawing.Color.GreenYellow;
             this.btn_cikis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cikis.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_cikis.ForeColor = System.Drawing.Color.Green;
+            this.btn_cikis.ForeColor = System.Drawing.Color.PaleGoldenrod;
             this.btn_cikis.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
-            this.btn_cikis.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(252)))), ((int)(((byte)(76)))));
+            this.btn_cikis.IconColor = System.Drawing.Color.PaleGoldenrod;
             this.btn_cikis.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_cikis.IconSize = 25;
             this.btn_cikis.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -112,9 +111,9 @@
             this.btn_stok.FlatAppearance.MouseDownBackColor = System.Drawing.Color.GreenYellow;
             this.btn_stok.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_stok.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_stok.ForeColor = System.Drawing.Color.Green;
+            this.btn_stok.ForeColor = System.Drawing.Color.PaleGoldenrod;
             this.btn_stok.IconChar = FontAwesome.Sharp.IconChar.StoreAlt;
-            this.btn_stok.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(252)))), ((int)(((byte)(76)))));
+            this.btn_stok.IconColor = System.Drawing.Color.PaleGoldenrod;
             this.btn_stok.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_stok.IconSize = 25;
             this.btn_stok.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -135,9 +134,9 @@
             this.btn_tedarikci_detaylari.FlatAppearance.MouseDownBackColor = System.Drawing.Color.GreenYellow;
             this.btn_tedarikci_detaylari.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_tedarikci_detaylari.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_tedarikci_detaylari.ForeColor = System.Drawing.Color.Green;
+            this.btn_tedarikci_detaylari.ForeColor = System.Drawing.Color.PaleGoldenrod;
             this.btn_tedarikci_detaylari.IconChar = FontAwesome.Sharp.IconChar.TruckFast;
-            this.btn_tedarikci_detaylari.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(252)))), ((int)(((byte)(76)))));
+            this.btn_tedarikci_detaylari.IconColor = System.Drawing.Color.PaleGoldenrod;
             this.btn_tedarikci_detaylari.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_tedarikci_detaylari.IconSize = 25;
             this.btn_tedarikci_detaylari.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -158,9 +157,9 @@
             this.btn_borc_odeme.FlatAppearance.MouseDownBackColor = System.Drawing.Color.GreenYellow;
             this.btn_borc_odeme.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_borc_odeme.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_borc_odeme.ForeColor = System.Drawing.Color.Green;
+            this.btn_borc_odeme.ForeColor = System.Drawing.Color.PaleGoldenrod;
             this.btn_borc_odeme.IconChar = FontAwesome.Sharp.IconChar.CreditCardAlt;
-            this.btn_borc_odeme.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(252)))), ((int)(((byte)(76)))));
+            this.btn_borc_odeme.IconColor = System.Drawing.Color.PaleGoldenrod;
             this.btn_borc_odeme.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_borc_odeme.IconSize = 25;
             this.btn_borc_odeme.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -181,9 +180,9 @@
             this.btn_satis.FlatAppearance.MouseDownBackColor = System.Drawing.Color.GreenYellow;
             this.btn_satis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_satis.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_satis.ForeColor = System.Drawing.Color.Green;
+            this.btn_satis.ForeColor = System.Drawing.Color.PaleGoldenrod;
             this.btn_satis.IconChar = FontAwesome.Sharp.IconChar.ShoppingBasket;
-            this.btn_satis.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(252)))), ((int)(((byte)(76)))));
+            this.btn_satis.IconColor = System.Drawing.Color.PaleGoldenrod;
             this.btn_satis.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_satis.IconSize = 25;
             this.btn_satis.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -199,9 +198,8 @@
             // 
             // panelMarket
             // 
-            this.panelMarket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(252)))), ((int)(((byte)(76)))));
+            this.panelMarket.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.panelMarket.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panelMarket.Controls.Add(this.labelSeparator);
             this.panelMarket.Controls.Add(this.panel_basket);
             this.panelMarket.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelMarket.Location = new System.Drawing.Point(0, 0);
@@ -209,21 +207,9 @@
             this.panelMarket.Size = new System.Drawing.Size(230, 160);
             this.panelMarket.TabIndex = 0;
             // 
-            // labelSeparator
-            // 
-            this.labelSeparator.BackColor = System.Drawing.Color.White;
-            this.labelSeparator.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelSeparator.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.labelSeparator.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelSeparator.ForeColor = System.Drawing.Color.White;
-            this.labelSeparator.Location = new System.Drawing.Point(0, 159);
-            this.labelSeparator.Name = "labelSeparator";
-            this.labelSeparator.Size = new System.Drawing.Size(230, 1);
-            this.labelSeparator.TabIndex = 1;
-            // 
             // panel_basket
             // 
-            this.panel_basket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(252)))), ((int)(((byte)(76)))));
+            this.panel_basket.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.panel_basket.BackgroundImage = global::Mahalle_marketi.Properties.Resources.tutti_shopping_basket_with_fruit_milk_and_wine_1;
             this.panel_basket.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel_basket.Location = new System.Drawing.Point(46, 23);
@@ -236,17 +222,17 @@
             this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContainer.Location = new System.Drawing.Point(230, 0);
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(654, 611);
+            this.panelContainer.Size = new System.Drawing.Size(754, 611);
             this.panelContainer.TabIndex = 1;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 611);
+            this.ClientSize = new System.Drawing.Size(984, 611);
             this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.panelNavigation);
-            this.MinimumSize = new System.Drawing.Size(900, 650);
+            this.MinimumSize = new System.Drawing.Size(1000, 650);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Market Sistem yönetimi";
@@ -261,7 +247,6 @@
         private Panel panelNavigation;
         private Panel panelMarket;
         private Panel panel_basket;
-        private Label labelSeparator;
         private FontAwesome.Sharp.IconButton btn_cikis;
         private FontAwesome.Sharp.IconButton btn_stok;
         private FontAwesome.Sharp.IconButton btn_tedarikci_detaylari;
