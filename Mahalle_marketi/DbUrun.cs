@@ -15,6 +15,7 @@ namespace Mahalle_marketi
         {
             string sql = "datasource=localhost;port=3306;username=root;password=;database=mahalle_marketi";
             MySqlConnection con = new MySqlConnection(sql);
+
             try
             {
                 con.Open();
