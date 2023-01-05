@@ -26,7 +26,7 @@ namespace Mahalle_marketi.UserControls
         }
 
         private void btn_satisGecmisi_Click(object sender, EventArgs e)
-        {
+        {   
             UC_satisKayitlari uc = new UC_satisKayitlari();
             addUserControl(uc);
         }

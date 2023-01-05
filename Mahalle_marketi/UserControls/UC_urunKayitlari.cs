@@ -314,6 +314,11 @@ namespace Mahalle_marketi.UserControls
                 }
             }
         }
+
+        private void TextBox_urunAra_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
 

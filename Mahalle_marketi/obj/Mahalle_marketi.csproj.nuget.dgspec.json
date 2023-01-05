@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Abduljalal lawal\\Source\\Repos\\Mahalle_marketiApp\\Mahalle_marketi\\Mahalle_marketi.csproj": {}
+    "C:\\Users\\Abduljalal lawal\\Desktop\\mh\\Mahalle_marketi\\Mahalle_marketi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Abduljalal lawal\\Source\\Repos\\Mahalle_marketiApp\\Mahalle_marketi\\Mahalle_marketi.csproj": {
+    "C:\\Users\\Abduljalal lawal\\Desktop\\mh\\Mahalle_marketi\\Mahalle_marketi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Abduljalal lawal\\Source\\Repos\\Mahalle_marketiApp\\Mahalle_marketi\\Mahalle_marketi.csproj",
+        "projectUniqueName": "C:\\Users\\Abduljalal lawal\\Desktop\\mh\\Mahalle_marketi\\Mahalle_marketi.csproj",
         "projectName": "Mahalle_marketi",
-        "projectPath": "C:\\Users\\Abduljalal lawal\\Source\\Repos\\Mahalle_marketiApp\\Mahalle_marketi\\Mahalle_marketi.csproj",
+        "projectPath": "C:\\Users\\Abduljalal lawal\\Desktop\\mh\\Mahalle_marketi\\Mahalle_marketi.csproj",
         "packagesPath": "C:\\Users\\Abduljalal lawal\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Abduljalal lawal\\Source\\Repos\\Mahalle_marketiApp\\Mahalle_marketi\\obj\\",
+        "outputPath": "C:\\Users\\Abduljalal lawal\\Desktop\\mh\\Mahalle_marketi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Abduljalal lawal\\AppData\\Roaming\\NuGet\\NuGet.Config",

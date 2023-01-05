@@ -116,6 +116,7 @@ namespace Mahalle_marketi.UserControls
             }
         }
 
+        // Silme Butonu
         private void DataGridView_satisKayitlari_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if(e.ColumnIndex == 5)

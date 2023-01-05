@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -105,6 +106,7 @@
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.a = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView_urunKayitlari)).BeginInit();
             this.panel5.SuspendLayout();
@@ -123,7 +125,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(484, 10);
+            this.panel1.Size = new System.Drawing.Size(416, 10);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -146,7 +148,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(10, 10);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(474, 352);
+            this.panel3.Size = new System.Drawing.Size(406, 352);
             this.panel3.TabIndex = 2;
             // 
             // btn_search
@@ -178,7 +180,7 @@
             this.TextBox_urunAra.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TextBox_urunAra.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TextBox_urunAra.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TextBox_urunAra.Location = new System.Drawing.Point(21, 18);
+            this.TextBox_urunAra.Location = new System.Drawing.Point(7, 18);
             this.TextBox_urunAra.Name = "TextBox_urunAra";
             this.TextBox_urunAra.PasswordChar = '\0';
             this.TextBox_urunAra.PlaceholderText = "";
@@ -187,6 +189,7 @@
             this.TextBox_urunAra.Size = new System.Drawing.Size(230, 36);
             this.TextBox_urunAra.TabIndex = 7;
             this.TextBox_urunAra.TextOffset = new System.Drawing.Point(7, 0);
+            this.TextBox_urunAra.TextChanged += new System.EventHandler(this.TextBox_urunAra_TextChanged);
             this.TextBox_urunAra.Enter += new System.EventHandler(this.TextBox_urunAra_Enter);
             this.TextBox_urunAra.Leave += new System.EventHandler(this.TextBox_urunAra_Leave);
             // 
@@ -195,7 +198,7 @@
             this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label17.Location = new System.Drawing.Point(172, 26);
+            this.label17.Location = new System.Drawing.Point(104, 26);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(79, 19);
             this.label17.TabIndex = 6;
@@ -257,7 +260,7 @@
             dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.DataGridView_urunKayitlari.RowsDefaultCellStyle = dataGridViewCellStyle7;
             this.DataGridView_urunKayitlari.RowTemplate.Height = 25;
-            this.DataGridView_urunKayitlari.Size = new System.Drawing.Size(433, 264);
+            this.DataGridView_urunKayitlari.Size = new System.Drawing.Size(365, 264);
             this.DataGridView_urunKayitlari.TabIndex = 4;
             this.DataGridView_urunKayitlari.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Carrot;
             this.DataGridView_urunKayitlari.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(216)))), ((int)(((byte)(189)))));
@@ -375,7 +378,7 @@
             "Son ayda",
             "Son yılda",
             "Tüm zamanlar"});
-            this.ComboBox_filtreleme.Location = new System.Drawing.Point(257, 18);
+            this.ComboBox_filtreleme.Location = new System.Drawing.Point(189, 18);
             this.ComboBox_filtreleme.Name = "ComboBox_filtreleme";
             this.ComboBox_filtreleme.ShadowDecoration.CustomizableEdges = customizableEdges4;
             this.ComboBox_filtreleme.Size = new System.Drawing.Size(197, 36);
@@ -391,7 +394,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(10, 362);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(474, 384);
+            this.panel5.Size = new System.Drawing.Size(406, 384);
             this.panel5.TabIndex = 5;
             // 
             // İstatistikler
@@ -399,7 +402,7 @@
             this.İstatistikler.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.İstatistikler.AutoSize = true;
             this.İstatistikler.Font = new System.Drawing.Font("Segoe UI", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.İstatistikler.Location = new System.Drawing.Point(170, 46);
+            this.İstatistikler.Location = new System.Drawing.Point(136, 46);
             this.İstatistikler.Name = "İstatistikler";
             this.İstatistikler.Size = new System.Drawing.Size(135, 31);
             this.İstatistikler.TabIndex = 6;
@@ -412,7 +415,7 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel7.Location = new System.Drawing.Point(0, 134);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(474, 250);
+            this.panel7.Size = new System.Drawing.Size(406, 250);
             this.panel7.TabIndex = 5;
             // 
             // tableLayoutPanel1
@@ -430,7 +433,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(474, 250);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(406, 250);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // guna2CustomGradientPanel2
@@ -448,13 +451,13 @@
             this.guna2CustomGradientPanel2.FillColor = System.Drawing.Color.Green;
             this.guna2CustomGradientPanel2.FillColor2 = System.Drawing.Color.Lime;
             this.guna2CustomGradientPanel2.FillColor3 = System.Drawing.Color.Lime;
-            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(160, 3);
+            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(138, 3);
             this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
             this.guna2CustomGradientPanel2.ShadowDecoration.BorderRadius = 20;
             this.guna2CustomGradientPanel2.ShadowDecoration.CustomizableEdges = customizableEdges6;
             this.guna2CustomGradientPanel2.ShadowDecoration.Depth = 15;
             this.guna2CustomGradientPanel2.ShadowDecoration.Enabled = true;
-            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(152, 193);
+            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(129, 193);
             this.guna2CustomGradientPanel2.TabIndex = 1;
             // 
             // label_odenen_toplamTutari
@@ -507,7 +510,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(4, 0);
+            this.label3.Location = new System.Drawing.Point(-8, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(145, 46);
             this.label3.TabIndex = 1;
@@ -528,13 +531,13 @@
             this.guna2CustomGradientPanel3.FillColor = System.Drawing.Color.Red;
             this.guna2CustomGradientPanel3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.guna2CustomGradientPanel3.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.guna2CustomGradientPanel3.Location = new System.Drawing.Point(318, 3);
+            this.guna2CustomGradientPanel3.Location = new System.Drawing.Point(273, 3);
             this.guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
             this.guna2CustomGradientPanel3.ShadowDecoration.BorderRadius = 20;
             this.guna2CustomGradientPanel3.ShadowDecoration.CustomizableEdges = customizableEdges8;
             this.guna2CustomGradientPanel3.ShadowDecoration.Depth = 15;
             this.guna2CustomGradientPanel3.ShadowDecoration.Enabled = true;
-            this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(153, 193);
+            this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(130, 193);
             this.guna2CustomGradientPanel3.TabIndex = 2;
             // 
             // label_borc_toplamTutari
@@ -587,7 +590,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(30, 0);
+            this.label4.Location = new System.Drawing.Point(19, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(93, 46);
             this.label4.TabIndex = 1;
@@ -614,7 +617,7 @@
             this.guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges10;
             this.guna2CustomGradientPanel1.ShadowDecoration.Depth = 15;
             this.guna2CustomGradientPanel1.ShadowDecoration.Enabled = true;
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(151, 193);
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(129, 193);
             this.guna2CustomGradientPanel1.TabIndex = 0;
             // 
             // label_urun_toplamTutar
@@ -667,7 +670,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(28, 0);
+            this.label2.Location = new System.Drawing.Point(17, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(95, 46);
             this.label2.TabIndex = 0;
@@ -678,7 +681,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(383, 188);
+            this.label1.Location = new System.Drawing.Point(349, 188);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(135, 31);
             this.label1.TabIndex = 1;
@@ -690,7 +693,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(474, 34);
+            this.panel6.Size = new System.Drawing.Size(406, 34);
             this.panel6.TabIndex = 0;
             // 
             // panel4
@@ -699,7 +702,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(10, 746);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(474, 34);
+            this.panel4.Size = new System.Drawing.Size(406, 34);
             this.panel4.TabIndex = 6;
             // 
             // panel8
@@ -711,7 +714,7 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(10, 780);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(474, 500);
+            this.panel8.Size = new System.Drawing.Size(406, 500);
             this.panel8.TabIndex = 7;
             // 
             // label11
@@ -719,7 +722,7 @@
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(9, 24);
+            this.label11.Location = new System.Drawing.Point(-25, 24);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(457, 31);
             this.label11.TabIndex = 4;
@@ -744,7 +747,7 @@
             "Son ayda",
             "Son yılda",
             "Tüm zamanlar"});
-            this.ComboBox_enCokSatan_filtreleme.Location = new System.Drawing.Point(257, 71);
+            this.ComboBox_enCokSatan_filtreleme.Location = new System.Drawing.Point(189, 71);
             this.ComboBox_enCokSatan_filtreleme.Name = "ComboBox_enCokSatan_filtreleme";
             this.ComboBox_enCokSatan_filtreleme.ShadowDecoration.CustomizableEdges = customizableEdges12;
             this.ComboBox_enCokSatan_filtreleme.Size = new System.Drawing.Size(197, 36);
@@ -805,7 +808,7 @@
             dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.DataGridView_enCokSatan.RowsDefaultCellStyle = dataGridViewCellStyle13;
             this.DataGridView_enCokSatan.RowTemplate.Height = 25;
-            this.DataGridView_enCokSatan.Size = new System.Drawing.Size(433, 314);
+            this.DataGridView_enCokSatan.Size = new System.Drawing.Size(365, 314);
             this.DataGridView_enCokSatan.TabIndex = 2;
             this.DataGridView_enCokSatan.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Carrot;
             this.DataGridView_enCokSatan.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(216)))), ((int)(((byte)(189)))));
@@ -884,7 +887,7 @@
             this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel9.Location = new System.Drawing.Point(10, 1280);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(474, 46);
+            this.panel9.Size = new System.Drawing.Size(406, 46);
             this.panel9.TabIndex = 8;
             // 
             // UC_urunKayitlari
@@ -900,7 +903,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "UC_urunKayitlari";
-            this.Size = new System.Drawing.Size(484, 1320);
+            this.Size = new System.Drawing.Size(416, 1320);
             this.Load += new System.EventHandler(this.UC_urunKayitlari_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -978,5 +981,6 @@
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private DataGridViewTextBoxColumn Column7;
         private DataGridViewTextBoxColumn Column9;
+        private Guna.UI2.WinForms.Guna2AnimateWindow a;
     }
 }

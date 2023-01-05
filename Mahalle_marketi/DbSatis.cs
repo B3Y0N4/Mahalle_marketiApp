@@ -98,6 +98,42 @@ namespace Mahalle_marketi
             return tb;
 
         }
+        // borc ödeme tablosunu doldur
+        public static DataTable borc_kayitTablosunu_Doldur(String query)
+        {
+            string sql = query;
+            MySqlConnection con = GetConnection();
+            MySqlCommand cmd = new MySqlCommand(sql, con);
+            cmd.Parameters.Add("@kullanici_adi", MySqlDbType.String).Value = kullanici.kullanici_adi;
+
+           
+
+            try
+            {
+                cmd.ExecuteNonQuery();
+
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Internet bağlantısını kontrol ediniz! \n" + ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
+
+            var reader = cmd.ExecuteReader();
+            if (reader.Read() == false)
+            {
+                con.Close();
+                return null;
+            }
+            reader.Close();
+
+            MySqlDataAdapter apd = new MySqlDataAdapter(cmd);
+            DataTable tb = new DataTable();
+            apd.Fill(tb);
+            return tb;
+
+        }
 
         public static void satis_sil(String query, String satis_id)
         {
@@ -175,6 +211,33 @@ namespace Mahalle_marketi
             {
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("satış ve ürün kayıtları güncellendi", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("bir hata oluştu! \n" + ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+        }
+
+
+        public static void borclari_guncelle(String query, String satis_id, int odenen, int borc, String isim_soyisim)
+        {
+            string sql = query;
+            MySqlConnection con = GetConnection();
+            MySqlCommand cmd = new MySqlCommand(sql, con);
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.Parameters.Add("@isim_soyisim", MySqlDbType.String).Value = isim_soyisim;
+            cmd.Parameters.Add("@kullanici_adi", MySqlDbType.String).Value = kullanici.kullanici_adi; 
+            cmd.Parameters.Add("@satis_id", MySqlDbType.String).Value = satis_id;
+            cmd.Parameters.Add("@toplam_odenen", MySqlDbType.Int32).Value = odenen;
+            cmd.Parameters.Add("@toplam_borc", MySqlDbType.Int32).Value = borc;
+
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("satış bilgileri güncellendi", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
             }

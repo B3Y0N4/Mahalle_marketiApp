@@ -59,3 +59,47 @@ C:\Users\OUSSAMA\Desktop\Mahalle_marketiApp\Mahalle_marketi\obj\Debug\net6.0-win
 C:\Users\OUSSAMA\Desktop\Mahalle_marketiApp\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.UserControls.UC_urunler.resources
 C:\Users\OUSSAMA\Desktop\Mahalle_marketiApp\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.Satis_urun_silme.resources
 C:\Users\OUSSAMA\Desktop\Mahalle_marketiApp\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.Giris_sayfasi.resources
+C:\Users\Abduljalal lawal\Desktop\mh\Mahalle_marketi\bin\Debug\net6.0-windows\Mahalle_marketi.exe
+C:\Users\Abduljalal lawal\Desktop\mh\Mahalle_marketi\bin\Debug\net6.0-windows\Mahalle_marketi.deps.json
+C:\Users\Abduljalal lawal\Desktop\mh\Mahalle_marketi\bin\Debug\net6.0-windows\Mahalle_marketi.runtimeconfig.json
+C:\Users\Abduljalal lawal\Desktop\mh\Mahalle_marketi\bin\Debug\net6.0-windows\Mahalle_marketi.dll
+C:\Users\Abduljalal lawal\Desktop\mh\Mahalle_marketi\bin\Debug\net6.0-windows\Mahalle_marketi.pdb
+C:\Users\Abduljalal lawal\Desktop\mh\Mahalle_marketi\bin\Debug\net6.0-windows\FontAwesome.Sharp.dll
+C:\Users\Abduljalal lawal\Desktop\mh\Mahalle_marketi\bin\Debug\net6.0-windows\Google.Protobuf.dll
+C:\Users\Abduljalal lawal\Desktop\mh\Mahalle_marketi\bin\Debug\net6.0-windows\Guna.UI2.dll
+C:\Users\Abduljalal lawal\Desktop\mh\Mahalle_marketi\bin\Debug\net6.0-windows\K4os.Compression.LZ4.dll
+C:\Users\Abduljalal lawal\Desktop\mh\Mahalle_marketi\bin\Debug\net6.0-windows\K4os.Compression.LZ4.Streams.dll
+C:\Users\Abduljalal lawal\Desktop\mh\Mahalle_marketi\bin\Debug\net6.0-windows\K4os.Hash.xxHash.dll
+C:\Users\Abduljalal lawal\Desktop\mh\Mahalle_marketi\bin\Debug\net6.0-windows\MySql.Data.dll
+C:\Users\Abduljalal lawal\Desktop\mh\Mahalle_marketi\bin\Debug\net6.0-windows\ZstdNet.dll
+C:\Users\Abduljalal lawal\Desktop\mh\Mahalle_marketi\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
+C:\Users\Abduljalal lawal\Desktop\mh\Mahalle_marketi\bin\Debug\net6.0-windows\System.Management.dll
+C:\Users\Abduljalal lawal\Desktop\mh\Mahalle_marketi\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Management.dll
+C:\Users\Abduljalal lawal\Desktop\mh\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.csproj.AssemblyReference.cache
+C:\Users\Abduljalal lawal\Desktop\mh\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.AddProductForm.resources
+C:\Users\Abduljalal lawal\Desktop\mh\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.Form1.resources
+C:\Users\Abduljalal lawal\Desktop\mh\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.Giris_sayfasi.resources
+C:\Users\Abduljalal lawal\Desktop\mh\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.Properties.Resources.resources
+C:\Users\Abduljalal lawal\Desktop\mh\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.satis_miktari_guncelle.resources
+C:\Users\Abduljalal lawal\Desktop\mh\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.Satis_urun_silme.resources
+C:\Users\Abduljalal lawal\Desktop\mh\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.UserControls.UC_borc_odeme.resources
+C:\Users\Abduljalal lawal\Desktop\mh\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.UserControls.UC_kayitlar.resources
+C:\Users\Abduljalal lawal\Desktop\mh\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.UserControls.UC_satis.resources
+C:\Users\Abduljalal lawal\Desktop\mh\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.UserControls.UC_satisKayitlari.resources
+C:\Users\Abduljalal lawal\Desktop\mh\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.UserControls.UC_Stok.resources
+C:\Users\Abduljalal lawal\Desktop\mh\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.UserControls.UC_stokGirisi.resources
+C:\Users\Abduljalal lawal\Desktop\mh\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.UserControls.UC_tedarikci_detaylari.resources
+C:\Users\Abduljalal lawal\Desktop\mh\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.UserControls.UC_urunKayitlari.resources
+C:\Users\Abduljalal lawal\Desktop\mh\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.UserControls.UC_urunler.resources
+C:\Users\Abduljalal lawal\Desktop\mh\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.csproj.GenerateResource.cache
+C:\Users\Abduljalal lawal\Desktop\mh\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Abduljalal lawal\Desktop\mh\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.AssemblyInfoInputs.cache
+C:\Users\Abduljalal lawal\Desktop\mh\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.AssemblyInfo.cs
+C:\Users\Abduljalal lawal\Desktop\mh\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.csproj.CoreCompileInputs.cache
+C:\Users\Abduljalal lawal\Desktop\mh\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.csproj.CopyComplete
+C:\Users\Abduljalal lawal\Desktop\mh\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.dll
+C:\Users\Abduljalal lawal\Desktop\mh\Mahalle_marketi\obj\Debug\net6.0-windows\refint\Mahalle_marketi.dll
+C:\Users\Abduljalal lawal\Desktop\mh\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.pdb
+C:\Users\Abduljalal lawal\Desktop\mh\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.genruntimeconfig.cache
+C:\Users\Abduljalal lawal\Desktop\mh\Mahalle_marketi\obj\Debug\net6.0-windows\ref\Mahalle_marketi.dll
+C:\Users\Abduljalal lawal\Desktop\mh\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.BorçÖdeme.resources

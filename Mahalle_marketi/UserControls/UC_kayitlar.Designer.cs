@@ -35,7 +35,7 @@
             this.PanelKayitlar = new System.Windows.Forms.Panel();
             this.labelKayitlar = new System.Windows.Forms.Label();
             this.btn_satisGecmisi = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_stok_girisi = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_borc_arama = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel_kayitlar = new System.Windows.Forms.Panel();
             this.PanelKayitlar.SuspendLayout();
@@ -86,34 +86,34 @@
             this.btn_satisGecmisi.Text = "Satış Kayıtları";
             this.btn_satisGecmisi.Click += new System.EventHandler(this.btn_satisGecmisi_Click);
             // 
-            // btn_stok_girisi
+            // btn_borc_arama
             // 
-            this.btn_stok_girisi.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btn_stok_girisi.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(252)))), ((int)(((byte)(76)))));
-            this.btn_stok_girisi.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btn_stok_girisi.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.btn_stok_girisi.CustomizableEdges = customizableEdges3;
-            this.btn_stok_girisi.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btn_stok_girisi.DisabledState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btn_stok_girisi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btn_stok_girisi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btn_stok_girisi.FillColor = System.Drawing.Color.White;
-            this.btn_stok_girisi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_stok_girisi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btn_stok_girisi.HoverState.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_stok_girisi.Location = new System.Drawing.Point(168, 0);
-            this.btn_stok_girisi.Name = "btn_stok_girisi";
-            this.btn_stok_girisi.PressedColor = System.Drawing.Color.GreenYellow;
-            this.btn_stok_girisi.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            this.btn_stok_girisi.Size = new System.Drawing.Size(216, 50);
-            this.btn_stok_girisi.TabIndex = 6;
-            this.btn_stok_girisi.Text = "Satılan ürün kayıtları";
-            this.btn_stok_girisi.Click += new System.EventHandler(this.btn_stok_girisi_Click);
+            this.btn_borc_arama.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btn_borc_arama.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(252)))), ((int)(((byte)(76)))));
+            this.btn_borc_arama.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btn_borc_arama.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.btn_borc_arama.CustomizableEdges = customizableEdges3;
+            this.btn_borc_arama.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_borc_arama.DisabledState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_borc_arama.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_borc_arama.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_borc_arama.FillColor = System.Drawing.Color.White;
+            this.btn_borc_arama.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_borc_arama.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_borc_arama.HoverState.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_borc_arama.Location = new System.Drawing.Point(168, 0);
+            this.btn_borc_arama.Name = "btn_borc_arama";
+            this.btn_borc_arama.PressedColor = System.Drawing.Color.GreenYellow;
+            this.btn_borc_arama.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            this.btn_borc_arama.Size = new System.Drawing.Size(216, 50);
+            this.btn_borc_arama.TabIndex = 6;
+            this.btn_borc_arama.Text = "Kişi arama";
+            this.btn_borc_arama.Click += new System.EventHandler(this.btn_stok_girisi_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.btn_stok_girisi);
+            this.panel1.Controls.Add(this.btn_borc_arama);
             this.panel1.Controls.Add(this.btn_satisGecmisi);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 110);
@@ -151,7 +151,7 @@
         private Panel PanelKayitlar;
         private Label labelKayitlar;
         private Guna.UI2.WinForms.Guna2Button btn_satisGecmisi;
-        private Guna.UI2.WinForms.Guna2Button btn_stok_girisi;
+        private Guna.UI2.WinForms.Guna2Button btn_borc_arama;
         private Panel panel1;
         private Panel panel_kayitlar;
     }
