@@ -62,7 +62,8 @@ namespace Mahalle_marketi
             }
         }
 
-        public static Ürün find_urunByBk(int barkodu) {
+        public static Ürün find_urunByBk(int barkodu)
+        {
             string sql = "select * from ürünler where Ükodu = @urun_Bk and kullaniciAdi = @kullanici_adi";
             MySqlConnection con = GetConnection();
             MySqlCommand cmd = new MySqlCommand(sql, con);
@@ -95,8 +96,58 @@ namespace Mahalle_marketi
                 return null;
             }
 
+        }
 
+        public static void urun_miktarini_guncelle(int barkodu, int miktar)
+        {
+            string sql = "update ürünler set Ümiktar = @miktar where Ükodu = @urun_Bk and kullaniciAdi = @kullanici_adi";
+            MySqlConnection con = GetConnection();
+            MySqlCommand cmd = new MySqlCommand(sql, con);
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.Parameters.Add("@urun_Bk", MySqlDbType.Int32).Value = barkodu;
+            cmd.Parameters.Add("@kullanici_adi", MySqlDbType.String).Value = kullanici.kullanici_adi;
+            cmd.Parameters.Add("@miktar", MySqlDbType.Int32).Value = miktar;
+
+            try
+            {
+                cmd.ExecuteNonQuery();
+
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Internet bağlantısını kontrol ediniz! \n" + ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
 
         }
+
+        public static int bitmek_uzere_olan_urun_sayisi()
+        {
+            string sql = "select count(*) as urun_sayisi from ürünler where Ümiktar between 1 and 20";
+            MySqlConnection con = GetConnection();
+            MySqlCommand cmd = new MySqlCommand(sql, con);
+            cmd.CommandType = System.Data.CommandType.Text;
+
+            try
+            {
+                cmd.ExecuteNonQuery();
+
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Internet bağlantısını kontrol ediniz! \n" + ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
+            var reader = cmd.ExecuteReader();
+            reader.Read();
+
+            
+            return reader.GetInt32(0);
+
+        }
+
+
+
     }
 }

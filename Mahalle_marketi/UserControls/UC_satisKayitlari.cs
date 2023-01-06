@@ -130,6 +130,17 @@ namespace Mahalle_marketi.UserControls
                         try
                         {
                             DbSatis.satis_sil($"delete from satış where SatışId = @satis_id", satisId_listesi[e.RowIndex]);
+                            List<int> urunler_bk = DbSatisUrun.get_urunler_bk(satisId_listesi[e.RowIndex]);
+                            int urun_stok_miktari;
+                            int urun_miktari;
+                            int urun_yeni_stok_miktari;
+                            foreach (int urunbk in urunler_bk)
+                            {
+                                urun_stok_miktari = DbUrun.find_urunByBk(urunbk).Urun_miktari;
+                                urun_miktari = DbSatisUrun.get_urun_miktari(satisId_listesi[e.RowIndex], urunbk);
+                                urun_yeni_stok_miktari = urun_miktari + urun_stok_miktari;
+                                DbUrun.urun_miktarini_guncelle(urunbk, urun_yeni_stok_miktari);
+                            }
                             DbSatisUrun.urun_sil_by_SatisId($"delete from satışürün where Sid = @satis_id", satisId_listesi[e.RowIndex]);
                         }
                         catch
@@ -142,6 +153,11 @@ namespace Mahalle_marketi.UserControls
                     }
                 }
             }
+        }
+
+        private void btn_rapor_olustur_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

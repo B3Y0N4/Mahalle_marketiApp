@@ -47,6 +47,21 @@ namespace Mahalle_marketi
                     MessageBox.Show("Bu barkod, stokta hiçbir ürüne ait değil", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
+                int urun_stok_miktari = DbUrun.find_urunByBk(Int32.Parse(textBox_urunBarkodu.Text.Trim())).Urun_miktari;
+                if (urun_stok_miktari == 0)
+                {
+                    MessageBox.Show("Bu ürün stokta bitmiştir, lütfen bu üründen stoğunuzu doldurunuz", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (urun_stok_miktari < Int32.Parse(ComboBoxAdet.Text.Trim()))
+                {
+                    String birim = DbUrun.find_urunByBk(Int32.Parse(textBox_urunBarkodu.Text.Trim())).Urun_miktarBirimi;
+                    MessageBox.Show($"Bu üründen en fazla {urun_stok_miktari} {birim} alabilirsiniz", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+
+
             }
             catch
             {

@@ -59,3 +59,5 @@ C:\Users\OUSSAMA\Desktop\Mahalle_marketiApp\Mahalle_marketi\obj\Debug\net6.0-win
 C:\Users\OUSSAMA\Desktop\Mahalle_marketiApp\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.UserControls.UC_urunler.resources
 C:\Users\OUSSAMA\Desktop\Mahalle_marketiApp\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.Satis_urun_silme.resources
 C:\Users\OUSSAMA\Desktop\Mahalle_marketiApp\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.Giris_sayfasi.resources
+C:\Users\OUSSAMA\Desktop\Mahalle_marketiApp\Mahalle_marketi\obj\Debug\net6.0-windows\Interop.Microsoft.Office.Interop.Word.dll
+C:\Users\OUSSAMA\Desktop\Mahalle_marketiApp\Mahalle_marketi\obj\Debug\net6.0-windows\Mahalle_marketi.csproj.ResolveComReference.cache

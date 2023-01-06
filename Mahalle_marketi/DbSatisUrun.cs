@@ -180,5 +180,65 @@ namespace Mahalle_marketi
 
             }
         }
+
+        public static List<int> get_urunler_bk(String satis_id)
+        {
+            string sql = "select * from satışürün where Sid = @satis_id";
+            MySqlConnection con = GetConnection();
+            MySqlCommand cmd = new MySqlCommand(sql, con);
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.Parameters.Add("@satis_id", MySqlDbType.String).Value = satis_id;
+
+            try
+            {
+                cmd.ExecuteNonQuery();
+
+
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("ürün silinemedi! \n" + ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
+            var reader = cmd.ExecuteReader();
+            List<int> urunler_bk = new List<int>();
+            while (reader.Read())
+            {
+                urunler_bk.Add(reader.GetInt32(2));
+            }
+            
+            return urunler_bk;
+
+        }
+
+        public static int get_urun_miktari(String satis_id, int urun_bk)
+        {
+            string sql = "select * from satışürün where Sid = @satis_id and ÜrünBk = @urun_bk";
+            MySqlConnection con = GetConnection();
+            MySqlCommand cmd = new MySqlCommand(sql, con);
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.Parameters.Add("@satis_id", MySqlDbType.String).Value = satis_id;
+            cmd.Parameters.Add("@urun_bk", MySqlDbType.Int32).Value = urun_bk;
+
+            try
+            {
+                cmd.ExecuteNonQuery();
+
+
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("ürün silinemedi! \n" + ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
+            var reader = cmd.ExecuteReader();
+            reader.Read();
+            
+
+            return reader.GetInt32(5);
+
+        }
     }
 }

@@ -14,7 +14,7 @@ namespace Mahalle_marketi.UserControls
 {
     public partial class UC_satis : UserControl
     {
-        
+        private int bitmek_uzere_olan_urun_sayisi;
         private String kullanici_adi;
         private String kullanici_sifresi;
         public static int urun_Bk;
@@ -28,11 +28,32 @@ namespace Mahalle_marketi.UserControls
             kullanici_adi = kullanici.kullanici_adi;
             kullanici_sifresi = kullanici.kullanici_sifresi;
 
+
+
         }
         private void UC_satis_Load(object sender, EventArgs e)
         {
             comboBoxSatis.SelectedIndex = 0;
             panel_tumunuSil.Visible = false;
+            panel_uyari.Visible = false;
+
+            uyari_mesaji();
+
+
+        }
+
+        private void uyari_mesaji()
+        {
+            bitmek_uzere_olan_urun_sayisi = DbUrun.bitmek_uzere_olan_urun_sayisi();
+            if (bitmek_uzere_olan_urun_sayisi > 0)
+            {
+                panel_uyari.Visible = true;
+                label_biten_urun_sayisi.Text = $"Stokta {bitmek_uzere_olan_urun_sayisi} adet ürün";
+            }
+            else
+            {
+                panel_uyari.Visible = false;
+            }
         }
 
         private void comboBoxSatis_SelectedIndexChanged(object sender, EventArgs e)
@@ -190,6 +211,8 @@ namespace Mahalle_marketi.UserControls
                 int urun_toplam_tutari;
                 int urun_odenen_miktari;
                 int urun_borc_miktari;
+                int urun_stok_miktari;
+                int urun_stok_yeni_miktari;
 
                 foreach (DataGridViewRow row in DataGridViewSatisEkrani.Rows)
                 {
@@ -202,6 +225,11 @@ namespace Mahalle_marketi.UserControls
                     satisUrun = new SatisUrun(id, urun_bk, textBoxIsim.Text, urun_adi, urun_miktari, urun_toplam_tutari, urun_odenen_miktari, urun_borc_miktari, dateTime);
                     DbSatisUrun.satisUrun_ekle(satisUrun);
 
+
+                    urun_stok_miktari = DbUrun.find_urunByBk(urun_bk).Urun_miktari;
+                    urun_stok_yeni_miktari = urun_stok_miktari - urun_miktari;
+                    DbUrun.urun_miktarini_guncelle(urun_bk, urun_stok_yeni_miktari);
+
                 }
                 
             }
@@ -212,6 +240,7 @@ namespace Mahalle_marketi.UserControls
             }
 
             bilgileriSifirla();
+            uyari_mesaji();
         }
 
         private void btn_tumunuSil_Click(object sender, EventArgs e)

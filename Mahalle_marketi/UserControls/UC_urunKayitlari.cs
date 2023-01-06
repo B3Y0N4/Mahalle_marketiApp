@@ -8,12 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace Mahalle_marketi.UserControls
 {
     public partial class UC_urunKayitlari : UserControl
     {
         List<String> satisId_listesi = new List<String>();
+        int urun_kar_miktari;
+        int urun_zarar_miktari;
+        int urun_net_kar_miktari;
         int urun_toplam_miktari;
         int urun_toplam_tutari;
         int odenen_urun_miktari;
@@ -84,12 +86,75 @@ namespace Mahalle_marketi.UserControls
 
         void istatistikleri_guncelle()
         {
+            int urun_miktari;
+            int urun_odenen_miktari;
+            int urun_alis_fiyati;
+            urun_zarar_miktari = 0;
+            urun_kar_miktari = 0;
+            foreach (DataGridViewRow row in DataGridView_urunKayitlari.Rows)
+            {
+                try
+                {
+                    urun_alis_fiyati = DbUrun.find_urunByBk((int)DataGridView_urunKayitlari.Rows[row.Index].Cells[0].Value).Urun_alisFiyati;
+                }
+                catch
+                {
+                    return;
+                }
+                urun_odenen_miktari = (int)DataGridView_urunKayitlari.Rows[row.Index].Cells[4].Value;
+                urun_miktari = (int)DataGridView_urunKayitlari.Rows[row.Index].Cells[2].Value;
+                if (urun_odenen_miktari - (urun_miktari * urun_alis_fiyati) >= 0)
+                {
+                    urun_kar_miktari += urun_odenen_miktari - (urun_miktari * urun_alis_fiyati);
+                }
+                else
+                {
+                    urun_zarar_miktari += (urun_miktari * urun_alis_fiyati) - urun_odenen_miktari;
+                }
+            }
+
+            urun_net_kar_miktari = urun_kar_miktari - urun_zarar_miktari;
+
+            label_toplam_kar_miktari.Text = urun_kar_miktari.ToString() + " ₺";
+            label_zarar_miktari.Text = urun_zarar_miktari.ToString() + " ₺";
+            if (urun_net_kar_miktari >= 0)
+            {
+                label_toplam_net_kar_miktar.Text = urun_net_kar_miktari.ToString() + " ₺";
+                label_toplam_net_zarar_miktari.Text = "0 ₺";
+            }
+            else
+            {
+                label_toplam_net_kar_miktar.Text = "0 ₺";
+                label_toplam_net_zarar_miktari.Text = (urun_zarar_miktari - urun_kar_miktari).ToString() + " ₺";
+            }
+
+            String birim = " adet/kg";
+            String aranan = TextBox_urunAra.Text.Trim();
+            if (aranan != "Ürün arama, örnek: elma" && aranan != "")
+            {
+                
+                if (DataGridView_urunKayitlari.Rows.Count > 0)
+                {
+                    int urun_barkodu = (int)DataGridView_urunKayitlari.Rows[0].Cells[0].Value;
+                    try
+                    {
+                        birim = DbUrun.find_urunByBk(urun_barkodu).Urun_miktarBirimi;
+                    }
+                    catch
+                    {
+                        return;
+                    }
+                }
+            }
+             
+            
+
             urun_toplam_miktari = 0;
             foreach (DataGridViewRow row in DataGridView_urunKayitlari.Rows)
             {
                 urun_toplam_miktari += (int)DataGridView_urunKayitlari.Rows[row.Index].Cells[2].Value;
             }
-            label_urun_toplamMiktari.Text = urun_toplam_miktari.ToString() + " adet/kg";
+            label_urun_toplamMiktari.Text = urun_toplam_miktari.ToString() + " " + birim;
 
 
             urun_toplam_tutari = 0;
@@ -105,8 +170,8 @@ namespace Mahalle_marketi.UserControls
             {
                 odenen_urun_miktari = (int)DataGridView_urunKayitlari.Rows[row.Index].Cells[3].Value == (int)DataGridView_urunKayitlari.Rows[row.Index].Cells[4].Value ? odenen_urun_miktari + (int)DataGridView_urunKayitlari.Rows[row.Index].Cells[2].Value : odenen_urun_miktari;
             }
-            label_odenen_miktar.Text = odenen_urun_miktari.ToString() + " adet/kg";
-            label_borc_olarak_urunMiktar.Text = (urun_toplam_miktari - odenen_urun_miktari).ToString() + " adet/kg";
+            label_odenen_miktar.Text = odenen_urun_miktari.ToString() + " " + birim;
+            label_borc_olarak_urunMiktar.Text = (urun_toplam_miktari - odenen_urun_miktari).ToString() + " " + birim;
 
 
             odenen_toplamTutari = 0;
@@ -214,31 +279,7 @@ namespace Mahalle_marketi.UserControls
 
         private void ComboBox_enCokSatan_filtreleme_SelectedIndexChanged(object sender, EventArgs e)
         {
-            DataGridView_enCokSatan.Rows.Clear();
-            DateTime now = DateTime.Now;
-            if (ComboBox_enCokSatan_filtreleme.Text == "Bugün")
-            {
-                enCokSatan_Tablosunu_Doldur("select ÜrünBk, ÜrünAdı, sum(Miktar) as toplam_miktar, sum(ToplamTutar) as toplam_tutar, sum(Ödenen) as toplam_odenen, sum(borç) as toplam_borc from satışürün where kullaniciAdi = @kullanici_adi and DATE(Starih) = CURDATE() group by ÜrünBk order by toplam_miktar", now, now, false);
-            }
-            else if (ComboBox_enCokSatan_filtreleme.Text == "son hafta")
-            {
-                DateTime bir_hafta_once = now.AddDays(-7);
-                enCokSatan_Tablosunu_Doldur("select ÜrünBk, ÜrünAdı, sum(Miktar) as toplam_miktar, sum(ToplamTutar) as toplam_tutar, sum(Ödenen) as toplam_odenen, sum(borç) as toplam_borc from satışürün where kullaniciAdi = @kullanici_adi and Starih between @oldDate and @now group by ÜrünBk order by toplam_miktar", bir_hafta_once, now, true);
-            }
-            else if (ComboBox_enCokSatan_filtreleme.Text == "Son ayda")
-            {
-                DateTime bir_ay_once = now.AddDays(-30);
-                enCokSatan_Tablosunu_Doldur("select ÜrünBk, ÜrünAdı, sum(Miktar) as toplam_miktar, sum(ToplamTutar) as toplam_tutar, sum(Ödenen) as toplam_odenen, sum(borç) as toplam_borc from satışürün where kullaniciAdi = @kullanici_adi and Starih between @oldDate and @now group by ÜrünBk order by toplam_miktar", bir_ay_once, now, true);
-            }
-            else if (ComboBox_enCokSatan_filtreleme.Text == "Son yılda")
-            {
-                DateTime bir_yil_once = now.AddYears(-1);
-                enCokSatan_Tablosunu_Doldur("select ÜrünBk, ÜrünAdı, sum(Miktar) as toplam_miktar, sum(ToplamTutar) as toplam_tutar, sum(Ödenen) as toplam_odenen, sum(borç) as toplam_borc from satışürün where kullaniciAdi = @kullanici_adi and Starih between @oldDate and @now group by ÜrünBk order by toplam_miktar", bir_yil_once, now, true);
-            }
-            else
-            {
-                enCokSatan_Tablosunu_Doldur("select ÜrünBk, ÜrünAdı, sum(Miktar) as toplam_miktar, sum(ToplamTutar) as toplam_tutar, sum(Ödenen) as toplam_odenen, sum(borç) as toplam_borc from satışürün where kullaniciAdi = @kullanici_adi group by ÜrünBk order by toplam_miktar", now, now, false);
-            }
+            en_cok_satan_tablosunu_guncelle();
         }
 
         private void DataGridView_urunKayitlari_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -252,13 +293,20 @@ namespace Mahalle_marketi.UserControls
 
                     if (satis_urun_silme_form.delete_product)
                     {
+                        int urun_barkodu = (int)DataGridView_urunKayitlari.Rows[e.RowIndex].Cells[0].Value;
+                        int urun_miktar = (int)DataGridView_urunKayitlari.Rows[e.RowIndex].Cells[2].Value;
+                        int urun_stok_miktari;
+                        int urun_stokta_yeni_miktari;
                         int odenen;
                         int kalan;
                         int borc;
                         string ad_soyad;
                         try
                         {
-                            DbSatisUrun.urun_sil_by_SatisId_and_urunKb($"delete from satışürün where Sid = @satis_id and ÜrünBk = @urun_bk", satisId_listesi[e.RowIndex], (int)DataGridView_urunKayitlari.Rows[e.RowIndex].Cells[0].Value);
+                            DbSatisUrun.urun_sil_by_SatisId_and_urunKb($"delete from satışürün where Sid = @satis_id and ÜrünBk = @urun_bk", satisId_listesi[e.RowIndex], urun_barkodu);
+                            urun_stok_miktari = DbUrun.find_urunByBk((int)DataGridView_urunKayitlari.Rows[e.RowIndex].Cells[0].Value).Urun_miktari;
+                            urun_stokta_yeni_miktari = urun_stok_miktari + urun_miktar;
+                            DbUrun.urun_miktarini_guncelle(urun_barkodu, urun_stokta_yeni_miktari);
                             Dictionary<String, object> map = DbSatis.get_satis_toplamTutar("select * from satış where SatışId = @satis_id", satisId_listesi[e.RowIndex]);
                             ad_soyad= (String)map["ad soyad"];
                             int satis_toplam_tutari = (int)map["toplam tutar"];
@@ -310,9 +358,44 @@ namespace Mahalle_marketi.UserControls
                         satisId_listesi.RemoveAt(e.RowIndex);
                         DataGridView_urunKayitlari.Rows.RemoveAt(DataGridView_urunKayitlari.SelectedRows[0].Index);
                         istatistikleri_guncelle();
+                        en_cok_satan_tablosunu_guncelle();
                     }
                 }
             }
+        }
+
+        void en_cok_satan_tablosunu_guncelle()
+        {
+            DataGridView_enCokSatan.Rows.Clear();
+            DateTime now = DateTime.Now;
+            if (ComboBox_enCokSatan_filtreleme.Text == "Bugün")
+            {
+                enCokSatan_Tablosunu_Doldur("select ÜrünBk, ÜrünAdı, sum(Miktar) as toplam_miktar, sum(ToplamTutar) as toplam_tutar, sum(Ödenen) as toplam_odenen, sum(borç) as toplam_borc from satışürün where kullaniciAdi = @kullanici_adi and DATE(Starih) = CURDATE() group by ÜrünBk order by toplam_miktar", now, now, false);
+            }
+            else if (ComboBox_enCokSatan_filtreleme.Text == "son hafta")
+            {
+                DateTime bir_hafta_once = now.AddDays(-7);
+                enCokSatan_Tablosunu_Doldur("select ÜrünBk, ÜrünAdı, sum(Miktar) as toplam_miktar, sum(ToplamTutar) as toplam_tutar, sum(Ödenen) as toplam_odenen, sum(borç) as toplam_borc from satışürün where kullaniciAdi = @kullanici_adi and Starih between @oldDate and @now group by ÜrünBk order by toplam_miktar", bir_hafta_once, now, true);
+            }
+            else if (ComboBox_enCokSatan_filtreleme.Text == "Son ayda")
+            {
+                DateTime bir_ay_once = now.AddDays(-30);
+                enCokSatan_Tablosunu_Doldur("select ÜrünBk, ÜrünAdı, sum(Miktar) as toplam_miktar, sum(ToplamTutar) as toplam_tutar, sum(Ödenen) as toplam_odenen, sum(borç) as toplam_borc from satışürün where kullaniciAdi = @kullanici_adi and Starih between @oldDate and @now group by ÜrünBk order by toplam_miktar", bir_ay_once, now, true);
+            }
+            else if (ComboBox_enCokSatan_filtreleme.Text == "Son yılda")
+            {
+                DateTime bir_yil_once = now.AddYears(-1);
+                enCokSatan_Tablosunu_Doldur("select ÜrünBk, ÜrünAdı, sum(Miktar) as toplam_miktar, sum(ToplamTutar) as toplam_tutar, sum(Ödenen) as toplam_odenen, sum(borç) as toplam_borc from satışürün where kullaniciAdi = @kullanici_adi and Starih between @oldDate and @now group by ÜrünBk order by toplam_miktar", bir_yil_once, now, true);
+            }
+            else
+            {
+                enCokSatan_Tablosunu_Doldur("select ÜrünBk, ÜrünAdı, sum(Miktar) as toplam_miktar, sum(ToplamTutar) as toplam_tutar, sum(Ödenen) as toplam_odenen, sum(borç) as toplam_borc from satışürün where kullaniciAdi = @kullanici_adi group by ÜrünBk order by toplam_miktar", now, now, false);
+            }
+        }
+
+        private void btn_rapor_olustur_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 

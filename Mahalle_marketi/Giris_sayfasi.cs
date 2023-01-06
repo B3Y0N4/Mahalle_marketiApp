@@ -142,8 +142,15 @@ namespace Mahalle_marketi
                     MessageBox.Show("Şifre ve Şifreyi Tekrarla alanlarındaki şifre eşleşmiyor. Tekrar deneyiniz", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
+                try
+                {
+                    kullanici_bilgileri = Db_kullanicilar.get_kullanici_bilgileri("select * from kullanıcılar where kullanıcıAdı = @kullanici_adi", TextBox_kullaniciAdi.Text.Trim());
 
-                kullanici_bilgileri = Db_kullanicilar.get_kullanici_bilgileri("select * from kullanıcılar where kullanıcıAdı = @kullanici_adi", TextBox_kullaniciAdi.Text.Trim());
+                }
+                catch
+                {
+                    return;
+                }
 
                 if (kullanici_bilgileri.Keys.Count == 0)
                 {

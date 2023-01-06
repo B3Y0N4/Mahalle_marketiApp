@@ -119,7 +119,7 @@ namespace Mahalle_marketi
 
         private void btn_cikis_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Giriş yapmak istediğinizden emin misiniz", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Çıkış yapmak istediğinizden emin misiniz", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 kullanici.kullanici_adi = "";
                 kullanici.kullanici_sifresi = "";

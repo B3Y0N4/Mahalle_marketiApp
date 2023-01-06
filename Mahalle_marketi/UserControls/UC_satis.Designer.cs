@@ -32,8 +32,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -42,6 +42,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             this.PanelSatis = new System.Windows.Forms.Panel();
             this.labelSatis = new System.Windows.Forms.Label();
             this.panelSatisTuru = new System.Windows.Forms.Panel();
@@ -60,10 +62,6 @@
             this.labelToplam = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.DataGridViewSatisEkrani = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.labelisimSoyisim = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,6 +70,15 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guncelle = new System.Windows.Forms.DataGridViewButtonColumn();
             this.sil = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.labelisimSoyisim = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel_uyari = new System.Windows.Forms.Panel();
+            this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label_biten_urun_sayisi = new System.Windows.Forms.Label();
             this.PanelSatis.SuspendLayout();
             this.panelSatisTuru.SuspendLayout();
             this.panel_satisTuru.SuspendLayout();
@@ -80,6 +87,8 @@
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewSatisEkrani)).BeginInit();
             this.panel6.SuspendLayout();
+            this.panel_uyari.SuspendLayout();
+            this.guna2CustomGradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // PanelSatis
@@ -89,7 +98,7 @@
             this.PanelSatis.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelSatis.Location = new System.Drawing.Point(0, 0);
             this.PanelSatis.Name = "PanelSatis";
-            this.PanelSatis.Size = new System.Drawing.Size(654, 110);
+            this.PanelSatis.Size = new System.Drawing.Size(700, 110);
             this.PanelSatis.TabIndex = 0;
             // 
             // labelSatis
@@ -98,7 +107,7 @@
             this.labelSatis.AutoSize = true;
             this.labelSatis.Font = new System.Drawing.Font("Calibri", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelSatis.ForeColor = System.Drawing.Color.White;
-            this.labelSatis.Location = new System.Drawing.Point(277, 31);
+            this.labelSatis.Location = new System.Drawing.Point(300, 31);
             this.labelSatis.Name = "labelSatis";
             this.labelSatis.Size = new System.Drawing.Size(100, 49);
             this.labelSatis.TabIndex = 0;
@@ -113,7 +122,7 @@
             this.panelSatisTuru.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSatisTuru.Location = new System.Drawing.Point(0, 110);
             this.panelSatisTuru.Name = "panelSatisTuru";
-            this.panelSatisTuru.Size = new System.Drawing.Size(654, 50);
+            this.panelSatisTuru.Size = new System.Drawing.Size(700, 50);
             this.panelSatisTuru.TabIndex = 1;
             // 
             // panel_satisTuru
@@ -121,7 +130,7 @@
             this.panel_satisTuru.Controls.Add(this.labelSatisTuru);
             this.panel_satisTuru.Controls.Add(this.comboBoxSatis);
             this.panel_satisTuru.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel_satisTuru.Location = new System.Drawing.Point(230, 0);
+            this.panel_satisTuru.Location = new System.Drawing.Point(276, 0);
             this.panel_satisTuru.Name = "panel_satisTuru";
             this.panel_satisTuru.Size = new System.Drawing.Size(273, 50);
             this.panel_satisTuru.TabIndex = 4;
@@ -166,7 +175,7 @@
             // 
             this.panel_tumunuSil.Controls.Add(this.btn_tumunuSil);
             this.panel_tumunuSil.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel_tumunuSil.Location = new System.Drawing.Point(503, 0);
+            this.panel_tumunuSil.Location = new System.Drawing.Point(549, 0);
             this.panel_tumunuSil.Name = "panel_tumunuSil";
             this.panel_tumunuSil.Size = new System.Drawing.Size(151, 50);
             this.panel_tumunuSil.TabIndex = 3;
@@ -215,7 +224,7 @@
             // textBoxIsim
             // 
             this.textBoxIsim.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxIsim.Location = new System.Drawing.Point(250, 34);
+            this.textBoxIsim.Location = new System.Drawing.Point(273, 34);
             this.textBoxIsim.Name = "textBoxIsim";
             this.textBoxIsim.Size = new System.Drawing.Size(246, 23);
             this.textBoxIsim.TabIndex = 2;
@@ -232,7 +241,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 160);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(654, 451);
+            this.panel1.Size = new System.Drawing.Size(700, 451);
             this.panel1.TabIndex = 2;
             // 
             // panel7
@@ -241,19 +250,20 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel7.Location = new System.Drawing.Point(0, 354);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(654, 27);
+            this.panel7.Size = new System.Drawing.Size(700, 27);
             this.panel7.TabIndex = 7;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Controls.Add(this.panel_uyari);
             this.panel5.Controls.Add(this.btn_satisiOnayla);
             this.panel5.Controls.Add(this.labelToplamTutar);
             this.panel5.Controls.Add(this.labelToplam);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel5.Location = new System.Drawing.Point(0, 381);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(654, 70);
+            this.panel5.Size = new System.Drawing.Size(700, 70);
             this.panel5.TabIndex = 6;
             // 
             // btn_satisiOnayla
@@ -261,7 +271,7 @@
             this.btn_satisiOnayla.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_satisiOnayla.BorderRadius = 20;
-            this.btn_satisiOnayla.CustomizableEdges = customizableEdges5;
+            this.btn_satisiOnayla.CustomizableEdges = customizableEdges7;
             this.btn_satisiOnayla.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_satisiOnayla.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_satisiOnayla.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -271,7 +281,7 @@
             this.btn_satisiOnayla.ForeColor = System.Drawing.Color.White;
             this.btn_satisiOnayla.Location = new System.Drawing.Point(21, 12);
             this.btn_satisiOnayla.Name = "btn_satisiOnayla";
-            this.btn_satisiOnayla.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            this.btn_satisiOnayla.ShadowDecoration.CustomizableEdges = customizableEdges8;
             this.btn_satisiOnayla.Size = new System.Drawing.Size(234, 46);
             this.btn_satisiOnayla.TabIndex = 2;
             this.btn_satisiOnayla.Text = "Satışı Onayla";
@@ -308,7 +318,7 @@
             this.panel4.AutoSize = true;
             this.panel4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.panel4.Location = new System.Drawing.Point(37, 386);
+            this.panel4.Location = new System.Drawing.Point(60, 386);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(0, 0);
             this.panel4.TabIndex = 5;
@@ -369,7 +379,7 @@
             dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.DataGridViewSatisEkrani.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.DataGridViewSatisEkrani.RowTemplate.Height = 25;
-            this.DataGridViewSatisEkrani.Size = new System.Drawing.Size(592, 264);
+            this.DataGridViewSatisEkrani.Size = new System.Drawing.Size(638, 264);
             this.DataGridViewSatisEkrani.TabIndex = 0;
             this.DataGridViewSatisEkrani.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Carrot;
             this.DataGridViewSatisEkrani.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(216)))), ((int)(((byte)(189)))));
@@ -394,44 +404,6 @@
             this.DataGridViewSatisEkrani.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.DataGridViewSatisEkrani.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.DataGridViewSatisEkrani.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewSatisEkrani_CellContentClick);
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.textBoxIsim);
-            this.panel6.Controls.Add(this.labelisimSoyisim);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(654, 65);
-            this.panel6.TabIndex = 4;
-            // 
-            // labelisimSoyisim
-            // 
-            this.labelisimSoyisim.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelisimSoyisim.AutoSize = true;
-            this.labelisimSoyisim.Location = new System.Drawing.Point(150, 37);
-            this.labelisimSoyisim.Name = "labelisimSoyisim";
-            this.labelisimSoyisim.Size = new System.Drawing.Size(94, 15);
-            this.labelisimSoyisim.TabIndex = 3;
-            this.labelisimSoyisim.Text = "İsim ve Soyisim :";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 160);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(654, 10);
-            this.panel2.TabIndex = 3;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 170);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(10, 441);
-            this.panel3.TabIndex = 4;
             // 
             // Column1
             // 
@@ -509,6 +481,108 @@
             this.sil.Text = "Sil";
             this.sil.UseColumnTextForButtonValue = true;
             // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.textBoxIsim);
+            this.panel6.Controls.Add(this.labelisimSoyisim);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(700, 65);
+            this.panel6.TabIndex = 4;
+            // 
+            // labelisimSoyisim
+            // 
+            this.labelisimSoyisim.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelisimSoyisim.AutoSize = true;
+            this.labelisimSoyisim.Location = new System.Drawing.Point(173, 37);
+            this.labelisimSoyisim.Name = "labelisimSoyisim";
+            this.labelisimSoyisim.Size = new System.Drawing.Size(94, 15);
+            this.labelisimSoyisim.TabIndex = 3;
+            this.labelisimSoyisim.Text = "İsim ve Soyisim :";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 160);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(700, 10);
+            this.panel2.TabIndex = 3;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 170);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(10, 441);
+            this.panel3.TabIndex = 4;
+            // 
+            // panel_uyari
+            // 
+            this.panel_uyari.BackColor = System.Drawing.Color.White;
+            this.panel_uyari.Controls.Add(this.guna2CustomGradientPanel1);
+            this.panel_uyari.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel_uyari.Location = new System.Drawing.Point(464, 0);
+            this.panel_uyari.Name = "panel_uyari";
+            this.panel_uyari.Size = new System.Drawing.Size(236, 70);
+            this.panel_uyari.TabIndex = 1;
+            // 
+            // guna2CustomGradientPanel1
+            // 
+            this.guna2CustomGradientPanel1.BorderRadius = 30;
+            this.guna2CustomGradientPanel1.Controls.Add(this.label_biten_urun_sayisi);
+            this.guna2CustomGradientPanel1.Controls.Add(this.label2);
+            this.guna2CustomGradientPanel1.Controls.Add(this.label1);
+            this.guna2CustomGradientPanel1.CustomizableEdges = customizableEdges5;
+            this.guna2CustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.Red;
+            this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.Red;
+            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
+            this.guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(236, 70);
+            this.guna2CustomGradientPanel1.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(26, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 19);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Uyarı :";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(65, 39);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(106, 19);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Bitmek üzere !";
+            // 
+            // label_biten_urun_sayisi
+            // 
+            this.label_biten_urun_sayisi.AutoSize = true;
+            this.label_biten_urun_sayisi.BackColor = System.Drawing.Color.Transparent;
+            this.label_biten_urun_sayisi.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label_biten_urun_sayisi.ForeColor = System.Drawing.Color.White;
+            this.label_biten_urun_sayisi.Location = new System.Drawing.Point(79, 12);
+            this.label_biten_urun_sayisi.Name = "label_biten_urun_sayisi";
+            this.label_biten_urun_sayisi.Size = new System.Drawing.Size(131, 19);
+            this.label_biten_urun_sayisi.TabIndex = 2;
+            this.label_biten_urun_sayisi.Text = "Stokta 0 tane ürün";
+            // 
             // UC_satis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -519,7 +593,7 @@
             this.Controls.Add(this.panelSatisTuru);
             this.Controls.Add(this.PanelSatis);
             this.Name = "UC_satis";
-            this.Size = new System.Drawing.Size(654, 611);
+            this.Size = new System.Drawing.Size(700, 611);
             this.Load += new System.EventHandler(this.UC_satis_Load);
             this.PanelSatis.ResumeLayout(false);
             this.PanelSatis.PerformLayout();
@@ -534,6 +608,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewSatisEkrani)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.panel_uyari.ResumeLayout(false);
+            this.guna2CustomGradientPanel1.ResumeLayout(false);
+            this.guna2CustomGradientPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -570,5 +647,10 @@
         private DataGridViewTextBoxColumn Column5;
         private DataGridViewButtonColumn guncelle;
         private DataGridViewButtonColumn sil;
+        private Panel panel_uyari;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
+        private Label label_biten_urun_sayisi;
+        private Label label2;
+        private Label label1;
     }
 }
