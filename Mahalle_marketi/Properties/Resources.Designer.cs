@@ -83,6 +83,16 @@ namespace Mahalle_marketi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap excel {
+            get {
+                object obj = ResourceManager.GetObject("excel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_debt_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-debt-64", resourceCulture);
@@ -163,9 +173,29 @@ namespace Mahalle_marketi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pngegg {
+            get {
+                object obj = ResourceManager.GetObject("pngegg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap tutti_shopping_basket_with_fruit_milk_and_wine_1 {
             get {
                 object obj = ResourceManager.GetObject("tutti-shopping-basket-with-fruit-milk-and-wine-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap word {
+            get {
+                object obj = ResourceManager.GetObject("word", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -1,0 +1,8 @@
+firme adi= A
+irsaliye no= 5
+ürun adi= kahve
+ürün kodu= 200
+ürün barkodu= 200
+miktar turu= adet
+miktar= 90
+birim fiyati= 25

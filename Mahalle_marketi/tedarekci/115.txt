@@ -1,0 +1,8 @@
+firme adi= H
+irsaliye no= 1
+ürun adi= Cikolata
+ürün kodu= 130
+ürün barkodu= 115
+miktar turu= adet
+miktar= 100
+birim fiyati= 5

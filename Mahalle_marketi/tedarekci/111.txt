@@ -1,0 +1,8 @@
+firme adi= C
+irsaliye no= 1
+ürun adi= cilek
+ürün kodu= 124
+ürün barkodu= 111
+miktar turu= kg
+miktar= 5
+birim fiyati= 16

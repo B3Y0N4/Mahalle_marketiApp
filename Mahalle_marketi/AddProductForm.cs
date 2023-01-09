@@ -41,7 +41,8 @@ namespace Mahalle_marketi
 
             try
             {
-                bool urun_sorgula = DbUrun.check_urunBk_availability(Int32.Parse(textBox_urunBarkodu.Text.Trim()));
+                //bool urun_sorgula = DbStok.check_urunBk_availability(Int32.Parse(textBox_urunBarkodu.Text.Trim()));
+                bool urun_sorgula = DbStok.check_urunBk_availability(Int32.Parse(textBox_urunBarkodu.Text.Trim()));
                 if (!urun_sorgula)
                 {
                     MessageBox.Show("Bu barkod, stokta hiçbir ürüne ait değil", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -54,8 +55,8 @@ namespace Mahalle_marketi
             }
             
 
-            urun_Bk = Int32.Parse(textBox_urunBarkodu.Text.Trim());
-            miktar = Int32.Parse(ComboBoxAdet.Text.Trim());
+            urun_Bk = Int16.Parse(textBox_urunBarkodu.Text.Trim());
+            miktar = Int16.Parse(ComboBoxAdet.Text.Trim());
 
             this.Close();
 

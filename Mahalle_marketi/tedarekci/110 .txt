@@ -1,0 +1,8 @@
+firme adi= A
+irsaliye no= 1
+ürun adi= portakal
+ürün kodu= 123
+ürün barkodu= 110
+miktar turu= kg
+miktar= 10
+birim fiyati= 10

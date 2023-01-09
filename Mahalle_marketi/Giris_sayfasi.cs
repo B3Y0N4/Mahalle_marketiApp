@@ -9,11 +9,16 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 using Mahalle_marketi.UserControls;
+using ClassLibrary3;
 
 namespace Mahalle_marketi
 {
     public partial class Giris_sayfasi : Form
     {
+
+        kullanicilar user = new kullanicilar();
+
+
         public static Dictionary<String, String> kullanici_bilgileri;
         public String kullanici_adi;
         public String kullanici_sifresi;
@@ -80,7 +85,7 @@ namespace Mahalle_marketi
 
                 try
                 {
-                    kullanici_bilgileri = Db_kullanicilar.get_kullanici_bilgileri("select * from kullanıcılar where kullanıcıAdı = @kullanici_adi", TextBox_kullaniciAdi.Text.Trim());
+                    kullanici_bilgileri = Db_kullanicilar.get_kullanici_bilgileri("select * from kullanicilar where kullaniciAdi = @kullanici_adi", TextBox_kullaniciAdi.Text.Trim());
                 }
                 catch
                 {
@@ -143,7 +148,7 @@ namespace Mahalle_marketi
                     return;
                 }
 
-                kullanici_bilgileri = Db_kullanicilar.get_kullanici_bilgileri("select * from kullanıcılar where kullanıcıAdı = @kullanici_adi", TextBox_kullaniciAdi.Text.Trim());
+                kullanici_bilgileri = Db_kullanicilar.get_kullanici_bilgileri("select * from kullanicilar where kullaniciAdi = @kullanici_adi", TextBox_kullaniciAdi.Text.Trim());
 
                 if (kullanici_bilgileri.Keys.Count == 0)
                 {
@@ -152,7 +157,7 @@ namespace Mahalle_marketi
                     DateTime kaydolma_tarihi = DateTime.Now;
                     try
                     {
-                        Db_kullanicilar.kullanici_ekle("insert into kullanıcılar (kullanıcıAdı, kullanıcıŞifresi, kaydolmaTarihi) values (@kullanici_adi, @kullanici_sifresi, @kaydolma_tarihi)", kullanici_adi, kullanici_sifresi, kaydolma_tarihi);
+                        Db_kullanicilar.kullanici_ekle("insert into kullanicilar (kullaniciAdi,sifre, kaydolmaTarihi) values (@kullanici_adi, @kullanici_sifresi, @kaydolma_tarihi)", kullanici_adi, kullanici_sifresi, kaydolma_tarihi);
                     }
                     catch
                     {

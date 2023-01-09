@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClassLibrary3;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,20 @@ namespace Mahalle_marketi.UserControls
         public UC_tedarikci_detaylari()
         {
             InitializeComponent();
+        }
+
+        private void UC_tedarikci_detaylari_Load(object sender, EventArgs e)
+        {
+            //String query = "Select * From tedarekci";
+            //DbTedarikci.display_tedarikci_borclari(query, dataGridView1);
+            Model1 model = new Model1();
+            dataGridView1.DataSource = model.tedarekcis.ToList();
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+             Firmanin_borcu_kapat form2 = new Firmanin_borcu_kapat();
+             form2.Show();
         }
     }
 }

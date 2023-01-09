@@ -1,0 +1,8 @@
+firme adi= R
+irsaliye no= 2
+ürun adi= mango
+ürün kodu= 139
+ürün barkodu= 12
+miktar turu= adet
+miktar= 10
+birim fiyati= 20

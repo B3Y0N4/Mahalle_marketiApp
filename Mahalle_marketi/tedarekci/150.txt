@@ -1,0 +1,8 @@
+firme adi= R
+irsaliye no= 1
+ürun adi= shampoo
+ürün kodu= 1501
+ürün barkodu= 150
+miktar turu= adet
+miktar= 30
+birim fiyati= 20

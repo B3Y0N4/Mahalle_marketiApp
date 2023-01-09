@@ -1,5 +1,4 @@
-﻿using MySql.Data.MySqlClient;
-using MySqlX.XDevAPI.Relational;
+﻿using MySqlX.XDevAPI.Relational;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -7,22 +6,26 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
+using Org.BouncyCastle.Utilities.Collections;
+using ClassLibrary3;
+
 
 namespace Mahalle_marketi
 {
     internal class DbSatisUrun
     {
-        public static MySqlConnection GetConnection()
+        public static SqlConnection GetConnection()
         {
-            string sql = "datasource=localhost;port=3306;username=root;password=;database=mahalle_marketi";
-            MySqlConnection con = new MySqlConnection(sql);
+            string sql = "Data Source=LAPTOP-L2L5OAL6;Initial Catalog=mahalle_marketi;Integrated Security=True";
+            SqlConnection con = new SqlConnection(sql);
             try
             {
                 con.Open();
             }
-            catch (MySqlException ex)
+            catch (SqlException ex)
             {
-                MessageBox.Show("MySQL Connection! \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("SQL Server Connection! \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
             return con;
@@ -30,45 +33,74 @@ namespace Mahalle_marketi
 
         public static void satisUrun_ekle(SatisUrun satisUrun)
         {
-            string sql = "insert into satışürün (kullaniciAdi ,Sid, ÜrünBk, MüşteriAdıSoyadı, ÜrünAdı, Miktar, ToplamTutar, Ödenen, borç, Starih) " +
-                "values " + "(@kullanici_adi, @sid, @ürünBk, @müşteriAdıSoyadı, @ürünAdı, @miktar, @toplamTutar, @ödenen, @Borç, @starih)";
-            MySqlConnection con = GetConnection();
-            MySqlCommand cmd = new MySqlCommand(sql, con);
-            cmd.CommandType = System.Data.CommandType.Text; 
-            cmd.Parameters.Add("@kullanici_adi", MySqlDbType.String).Value = kullanici.kullanici_adi;
-            cmd.Parameters.Add("@sid", MySqlDbType.String).Value = satisUrun.Satis_id;
-            cmd.Parameters.Add("@ürünBk", MySqlDbType.Int32).Value = satisUrun.Urun_Bk;
-            cmd.Parameters.Add("@müşteriAdıSoyadı", MySqlDbType.String).Value = satisUrun.Musteri_adiSoyadi;
-            cmd.Parameters.Add("@ürünAdı", MySqlDbType.String).Value = satisUrun.Adi;
-            cmd.Parameters.Add("@miktar", MySqlDbType.Int32).Value = satisUrun.Miktar;
-            cmd.Parameters.Add("@toplamTutar", MySqlDbType.Int32).Value = satisUrun.Toplam_tutar;
-            cmd.Parameters.Add("@ödenen", MySqlDbType.Int32).Value = satisUrun.Odenen;
-            cmd.Parameters.Add("@Borç", MySqlDbType.Int32).Value = satisUrun.Borc;
-            cmd.Parameters.Add("@starih", MySqlDbType.DateTime).Value = satisUrun.Tarih;
 
-            try
+
+
+            using (Model1 context = new Model1())
             {
-                cmd.ExecuteNonQuery();
 
+
+                satisÜrün satisurun = new satisÜrün();
+                satisurun.satisId = satisUrun.Satis_id;
+                satisurun.urun_Bk = satisUrun.Urun_Bk;
+                satisurun.musteriAdi = satisUrun.MusteriAdi;
+                satisurun.musteriSoyadi = satisUrun.MusteriSoyadi;
+                satisurun.adi = satisUrun.Adi;
+                satisurun.miktar = satisUrun.Miktar;
+                satisurun.toplam_tutar = satisUrun.Toplam_tutar;
+                satisurun.odenen = satisUrun.Odenen;
+                satisurun.borc = satisUrun.Borc;
+                satisurun.tarih = satisUrun.Tarih;
+                context.satisÜrün.Add(satisurun);
+                context.SaveChanges();
+                //MessageBox.Show("Satış başarıyla gerçekleşti!");
 
             }
-            catch (MySqlException ex)
-            {
-                MessageBox.Show("Internet bağlantısını kontrol ediniz! \n" + ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            //string sql = "insert into satisÜrün(satisId, urun_Bk, musteriAdi, musteriSoyadi, adi, miktar, toplam_tutar, odenen, borc, tarih) " +
+            //    "values " + "(@satisId, @urun_Bk, @musteriAdi, @musteriSoyadi, @adi, @miktar, @toplam_tutar, @odenen, @borc, @tarih)";
+            //SqlConnection con = GetConnection();
+            //SqlCommand cmd = new SqlCommand(sql, con);
+            //cmd.CommandType = System.Data.CommandType.Text; 
+            //cmd.Parameters.Add("@kullanici_adi", SqlDbType.VarChar).Value = kullanici.kullanici_adi;
+            //cmd.Parameters.Add("@satisId", SqlDbType.VarChar).Value = satisUrun.Satis_id;
+            //cmd.Parameters.Add("@urun_Bk", SqlDbType.Int).Value = satisUrun.Urun_Bk;
+            //cmd.Parameters.Add("@musteriSoyadi", SqlDbType.VarChar).Value = satisUrun.MusteriSoyadi;
+            //cmd.Parameters.Add("@musteriAdi", SqlDbType.VarChar).Value = satisUrun.MusteriAdi;
+            //cmd.Parameters.Add("@adi", SqlDbType.VarChar).Value = satisUrun.Adi;
+            //cmd.Parameters.Add("@miktar", SqlDbType.Int).Value = satisUrun.Miktar;
+            //cmd.Parameters.Add("@toplam_tutar", SqlDbType.Int).Value = satisUrun.Toplam_tutar;
+            //cmd.Parameters.Add("@odenen", SqlDbType.Int).Value = satisUrun.Odenen;
+            //cmd.Parameters.Add("@borc", SqlDbType.Int).Value = satisUrun.Borc;
+            //cmd.Parameters.Add("@tarih", SqlDbType.DateTime).Value = satisUrun.Tarih;
+
+            //try
+            //{
+            //    cmd.ExecuteNonQuery();
+
+
+            //}
+            //catch (SqlException ex)
+            //{
+            //    MessageBox.Show("Internet bağlantısını kontrol ediniz! \n" + ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
+
+
+
+
+
         }
 
         public static DataTable urun_kayitTablosunu_Doldur(String query, DateTime oldDate, DateTime now, bool parameter)
         {
             string sql = query;
-            MySqlConnection con = GetConnection();
-            MySqlCommand cmd = new MySqlCommand(sql, con);
-            cmd.Parameters.Add("@kullanici_adi", MySqlDbType.String).Value = kullanici.kullanici_adi;
+            SqlConnection con = GetConnection();
+            SqlCommand cmd = new SqlCommand(sql, con);
+            cmd.Parameters.Add("@kullanici_adi", SqlDbType.VarChar).Value = kullanici.kullanici_adi;
             if (parameter)
             {
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.Add("@oldDate", MySqlDbType.DateTime).Value = oldDate;
-                cmd.Parameters.Add("@now", MySqlDbType.DateTime).Value = now;
+                cmd.Parameters.Add("@oldDate", SqlDbType.DateTime).Value = oldDate;
+                cmd.Parameters.Add("@now", SqlDbType.DateTime).Value = now;
             }
 
             try
@@ -76,7 +108,7 @@ namespace Mahalle_marketi
                 cmd.ExecuteNonQuery();
 
             }
-            catch (MySqlException ex)
+            catch (SqlException ex)
             {
                 MessageBox.Show("Internet bağlantısını kontrol ediniz! \n" + ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
@@ -91,7 +123,7 @@ namespace Mahalle_marketi
             }
             reader.Close();
 
-            MySqlDataAdapter apd = new MySqlDataAdapter(cmd);
+            SqlDataAdapter apd = new SqlDataAdapter(cmd);
             DataTable tb = new DataTable();
             apd.Fill(tb);
             return tb;
@@ -101,14 +133,14 @@ namespace Mahalle_marketi
         public static DataTable enCokSatan_Tablosunu_Doldur(String query, DateTime oldDate, DateTime now, bool parameter)
         {
             string sql = query;
-            MySqlConnection con = GetConnection();
-            MySqlCommand cmd = new MySqlCommand(sql, con);
-            cmd.Parameters.Add("@kullanici_adi", MySqlDbType.String).Value = kullanici.kullanici_adi;
+            SqlConnection con = GetConnection();
+            SqlCommand cmd = new SqlCommand(sql, con);
+            cmd.Parameters.Add("@kullanici_adi", SqlDbType.VarChar).Value = kullanici.kullanici_adi;
             if (parameter)
             {
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.Add("@oldDate", MySqlDbType.DateTime).Value = oldDate;
-                cmd.Parameters.Add("@now", MySqlDbType.DateTime).Value = now;
+                cmd.Parameters.Add("@oldDate", SqlDbType.DateTime).Value = oldDate;
+                cmd.Parameters.Add("@now", SqlDbType.DateTime).Value = now;
             }
 
             try
@@ -116,7 +148,7 @@ namespace Mahalle_marketi
                 cmd.ExecuteNonQuery();
 
             }
-            catch (MySqlException ex)
+            catch (SqlException ex)
             {
                 MessageBox.Show("Internet bağlantısını kontrol ediniz! \n" + ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
@@ -131,7 +163,7 @@ namespace Mahalle_marketi
             }
             reader.Close();
 
-            MySqlDataAdapter apd = new MySqlDataAdapter(cmd);
+            SqlDataAdapter apd = new SqlDataAdapter(cmd);
             DataTable tb = new DataTable();
             apd.Fill(tb);
             return tb;
@@ -141,10 +173,10 @@ namespace Mahalle_marketi
         public static void urun_sil_by_SatisId(String query, String satis_id)
         {
             string sql = query;
-            MySqlConnection con = GetConnection();
-            MySqlCommand cmd = new MySqlCommand(sql, con);
+            SqlConnection con = GetConnection();
+            SqlCommand cmd = new SqlCommand(sql, con);
             cmd.CommandType = System.Data.CommandType.Text;
-            cmd.Parameters.Add("@satis_id", MySqlDbType.String).Value = satis_id;
+            cmd.Parameters.Add("@satis_id", SqlDbType.VarChar).Value = satis_id;
 
             try
             {
@@ -152,7 +184,7 @@ namespace Mahalle_marketi
 
 
             }
-            catch (MySqlException ex)
+            catch (SqlException ex)
             {
                 MessageBox.Show("Satışa ait ürünler silinemedi! \n" + ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
@@ -162,11 +194,11 @@ namespace Mahalle_marketi
         public static void urun_sil_by_SatisId_and_urunKb(String query, String satis_id, int urun_bk)
         {
             string sql = query;
-            MySqlConnection con = GetConnection();
-            MySqlCommand cmd = new MySqlCommand(sql, con);
+            SqlConnection con = GetConnection();
+            SqlCommand cmd = new SqlCommand(sql, con);
             cmd.CommandType = System.Data.CommandType.Text;
-            cmd.Parameters.Add("@satis_id", MySqlDbType.String).Value = satis_id;
-            cmd.Parameters.Add("@urun_bk", MySqlDbType.Int32).Value = urun_bk;
+            cmd.Parameters.Add("@satis_id", SqlDbType.VarChar).Value = satis_id;
+            cmd.Parameters.Add("@urun_bk", SqlDbType.Int).Value = urun_bk;
 
             try
             {
@@ -174,7 +206,7 @@ namespace Mahalle_marketi
 
 
             }
-            catch (MySqlException ex)
+            catch (SqlException ex)
             {
                 MessageBox.Show("ürün silinemedi! \n" + ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
 

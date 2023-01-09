@@ -1,4 +1,4 @@
-﻿using MySqlX.XDevAPI.Relational;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Mahalle_marketi.UserControls
 {
@@ -22,6 +23,7 @@ namespace Mahalle_marketi.UserControls
         {
             InitializeComponent();
         }
+        public String conString = "Data Source=LAPTOP-L2L5OAL6;Initial Catalog=mahalle_marketi;Integrated Security=True";
 
         private void UC_urunKayitlari_Load(object sender, EventArgs e)
         {
