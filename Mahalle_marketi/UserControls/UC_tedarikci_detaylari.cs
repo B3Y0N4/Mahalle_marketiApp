@@ -22,8 +22,8 @@ namespace Mahalle_marketi.UserControls
         {
             //String query = "Select * From tedarekci";
             //DbTedarikci.display_tedarikci_borclari(query, dataGridView1);
-            Model1 model = new Model1();
-            dataGridView1.DataSource = model.tedarekcis.ToList();
+            Model1 model1 = new Model1();
+            dataGridView1.DataSource = model1.tedarekci.ToList();
         }
 
         private void iconButton1_Click(object sender, EventArgs e)

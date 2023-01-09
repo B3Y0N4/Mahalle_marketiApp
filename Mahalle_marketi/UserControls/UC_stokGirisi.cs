@@ -34,10 +34,11 @@ namespace Mahalle_marketi.UserControls
                 int übarkodu = Int16.Parse(File.ReadLines(path).Skip(4).Take(1).First().Split(" ").ToList()[2]);
                 String ümiktarTüru = File.ReadLines(path).Skip(5).Take(1).First().Split(" ").ToList()[2];
                 int ümiktari = Int16.Parse(File.ReadLines(path).Skip(6).Take(1).First().Split(" ").ToList()[1]);
-                int übirimfiyati = Int16.Parse(File.ReadLines(path).Skip(7).Take(1).First().Split(" ").ToList()[2]);
-                int marketinBorcu = ümiktari * übirimfiyati;
+                int üAlisFiyati = Int16.Parse(File.ReadLines(path).Skip(7).Take(1).First().Split(" ").ToList()[2]);
+                int marketinBorcu = ümiktari * üAlisFiyati;
                 DateTime tarih = DateTime.Now;
                 String iTarihi = tarih.ToString("MMMM dd yyyy hh:mm:ss tt");
+                int übirimfiyati = Int32.Parse(textBox2.Text);
 
                 using (Model1 context = new Model1())
                 {
@@ -54,6 +55,7 @@ namespace Mahalle_marketi.UserControls
                         urun.ümiktarTüru = ümiktarTüru;
                         urun.ümiktari = ümiktari;
                         urun.übirimfiyati = übirimfiyati;
+                        urun.üAlisFiyati = üAlisFiyati;
                         context.ürün.Add(urun);
                         context.SaveChanges();
                         MessageBox.Show("Stoğa yeni ürün eklendi");
@@ -64,31 +66,33 @@ namespace Mahalle_marketi.UserControls
                 }
                 using (Model1 context = new Model1())
                 {
-                    if (context.tedarekcis.Any(o => o.firmaAdi == firmaAdi && o.iTarihi == iTarihi && o.marketinBorcu == marketinBorcu))
+                    if (context.tedarekci.Any(o => o.firmaAdi == firmaAdi && o.iTarihi == iTarihi && o.marketinBorcu == marketinBorcu))
                     {
                         MessageBox.Show("Bu tedarikçi firmaya borcunuz daha önce kaydedildi");
                         return;
                     }
-                    var result = context.tedarekcis.SingleOrDefault(b => b.firmaAdi == firmaAdi);
+                    var result = context.tedarekci.SingleOrDefault(b => b.firmaAdi == firmaAdi);
                     if (result != null)
                     {
                         result.marketinBorcu = result.marketinBorcu + marketinBorcu;
                         //result.iTarihi = iTarihi;
                         context.SaveChanges();
-                        MessageBox.Show("Bir tedarikçiye yeni borcunuz oluştu");
+                        MessageBox.Show("Varolan Bir tedarikçiye yeni borcunuz oluştu");
                     }
                     else
                     {
-                        tedarekci td = new tedarekci();
-                        td.firmaAdi = firmaAdi;
-                        td.marketinBorcu = marketinBorcu;
-                        td.iTarihi = iTarihi;
-                        context.SaveChanges();
-                        MessageBox.Show("Bir tedarikçiye yeni borcunuz oluştu");
+                        //tedarekci td = new tedarekci();
+                        //td.firmaAdi = firmaAdi;
+                        //td.marketinBorcu = marketinBorcu;
+                        //td.iTarihi = iTarihi;
+                        //context.SaveChanges();
+                        //MessageBox.Show("Bir tedarikçiye yeni borcunuz oluştu");
+                        String query1 = "INSERT INTO dbo.tedarekci (firmaAdi, marketinBorcu, iTarihi) VALUES (@firmaAdi, @marketinBorcu, @iTarihi)";
+                        DbTedarikci.firmaya_borc_ekle(query1, firmaAdi, marketinBorcu, iTarihi);
                     }
-                        
 
-                    
+
+
 
 
                 }

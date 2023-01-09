@@ -1,8 +1,8 @@
-firme adi= A
+firme adi= AFirma
 irsaliye no= 1
-ürun adi= portakal
-ürün kodu= 123
-ürün barkodu= 110
+ürun adi= patates
+ürün kodu= 1230
+ürün barkodu= 1100
 miktar turu= kg
 miktar= 10
-birim fiyati= 10
+birim fiyati= 5

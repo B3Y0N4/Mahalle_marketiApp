@@ -12,11 +12,11 @@ namespace ClassLibrary3
         {
         }
 
-        public virtual DbSet<kullanicilar> kullanicilars { get; set; }
+        public virtual DbSet<kullanicilar> kullanicilar { get; set; }
         public virtual DbSet<müsteri> müsteri { get; set; }
         public virtual DbSet<satis> satis { get; set; }
         public virtual DbSet<satisÜrün> satisÜrün { get; set; }
-        public virtual DbSet<tedarekci> tedarekcis { get; set; }
+        public virtual DbSet<tedarekci> tedarekci { get; set; }
         public virtual DbSet<ürün> ürün { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

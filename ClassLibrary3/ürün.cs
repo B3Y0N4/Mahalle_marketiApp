@@ -19,6 +19,10 @@ namespace ClassLibrary3
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ükodu { get; set; }
 
+        [Required]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int üAlisFiyati { get; set; }
+
         [Key]
         [Column(Order = 1)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]

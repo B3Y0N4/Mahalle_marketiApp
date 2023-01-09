@@ -27,14 +27,14 @@ namespace Mahalle_marketi
             }
             return con;
         }
-        public static void firmaya_borc_ekle(String query, String firmaAdi, int marketinBorcu, DateTime itarihi)
+        public static void firmaya_borc_ekle(String query, String firmaAdi, int marketinBorcu, String itarihi)
         {
             string sql = query;
             SqlConnection con = GetConnection();
             SqlCommand cmd = new SqlCommand(sql, con);
             cmd.CommandType = System.Data.CommandType.Text;
             cmd.Parameters.Add("@firmaAdi", SqlDbType.VarChar).Value = firmaAdi;
-            cmd.Parameters.Add("@itarihi", SqlDbType.DateTime).Value = itarihi;
+            cmd.Parameters.Add("@itarihi", SqlDbType.VarChar).Value = itarihi;
             cmd.Parameters.Add("@marketinBorcu", SqlDbType.Int).Value = marketinBorcu;
 
             try

@@ -36,7 +36,7 @@ namespace Mahalle_marketi
                     {
                         using (Model1 db = new Model1())
                         {
-                            var result = db.tedarekcis.SingleOrDefault(b => b.firmaAdi == firmaAdi);
+                            var result = db.tedarekci.SingleOrDefault(b => b.firmaAdi == firmaAdi);
                             if (result != null)
                             {
                                 result.marketinBorcu = result.marketinBorcu - odenecek;
