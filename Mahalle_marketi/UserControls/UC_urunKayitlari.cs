@@ -30,7 +30,7 @@ namespace Mahalle_marketi.UserControls
             ComboBox_filtreleme.SelectedIndex = 0;
             ComboBox_enCokSatan_filtreleme.SelectedIndex = 0;
             DateTime now = DateTime.Now;
-            urun_kayitTablosunu_Doldur("select * from satışürün where kullaniciAdi = @kullanici_adi and DATE(Starih) = CURDATE()", now, now, false);
+            urun_kayitTablosunu_Doldur("select * from satisÜrün CONVERT(DATETIME, starih, 103) = CURDATE()", now, now, false);
             istatistikleri_guncelle();
         }
 

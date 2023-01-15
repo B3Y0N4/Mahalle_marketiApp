@@ -93,26 +93,27 @@ namespace Mahalle_marketi.UserControls
             DateTime now = DateTime.Now;
             if (ComboBox_filtreleme.Text == "Bugün")
             {
-                tabloyu_doldur("select * from satış where kullaniciAdi = @kullanici_adi and DATE(Starih) = CURDATE()", now, now, false);
+                tabloyu_doldur("select * from satis where starihi = convert(VARCHAR(10), GETDATE(), 120)", now, now, false);
             }
             else if (ComboBox_filtreleme.Text == "son hafta")
             {
                 DateTime bir_hafta_once = now.AddDays(-7);
-                tabloyu_doldur("select * from satış where kullaniciAdi = @kullanici_adi and Starih between @oldDate and @now", bir_hafta_once, now, true);
+                tabloyu_doldur("select * from satis where  starihi between @oldDate and @now", bir_hafta_once, now, true);
             }
             else if (ComboBox_filtreleme.Text == "Son ayda")
             {
                 DateTime bir_ay_once = now.AddDays(-30);
-                tabloyu_doldur("select * from satış where kullaniciAdi = @kullanici_adi and Starih between @oldDate and @now", bir_ay_once, now, true);
+                tabloyu_doldur("select * from satis where  starihi between @oldDate and @now", bir_ay_once, now, true);
             }
             else if (ComboBox_filtreleme.Text == "Son yılda")
             {
                 DateTime bir_yil_once = now.AddYears(-1);
-                tabloyu_doldur("select * from satış where kullaniciAdi = @kullanici_adi and Starih between @oldDate and @now", bir_yil_once, now, true);
+                tabloyu_doldur("select * from satis where  starihi between @oldDate and @now", bir_yil_once, now, true);
             }
+            //kullaniciAdi = @kullanici_adi and
             else
             {
-                tabloyu_doldur("select * from satış where kullaniciAdi = @kullanici_adi", now, now, false);
+                tabloyu_doldur("select * from satis ", now, now, false); //where kullaniciAdi = @kullanici_adi
             }
         }
 
@@ -129,8 +130,8 @@ namespace Mahalle_marketi.UserControls
                     {
                         try
                         {
-                            DbSatis.satis_sil($"delete from satış where SatışId = @satis_id", satisId_listesi[e.RowIndex]);
-                            DbSatisUrun.urun_sil_by_SatisId($"delete from satışürün where Sid = @satis_id", satisId_listesi[e.RowIndex]);
+                            DbSatis.satis_sil($"delete from satis where satisId = @satis_id", satisId_listesi[e.RowIndex]);
+                            DbSatisUrun.urun_sil_by_SatisId($"delete from satisÜrün where satisId = @satis_id", satisId_listesi[e.RowIndex]);
                         }
                         catch
                         {
@@ -143,5 +144,7 @@ namespace Mahalle_marketi.UserControls
                 }
             }
         }
+
+       
     }
 }
