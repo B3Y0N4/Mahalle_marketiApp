@@ -1,0 +1,8 @@
+firme adi= RF
+irsaliye no= 1
+ürun adi= kalem
+ürün kodu= 1390
+ürün barkodu= 13900
+miktar turu= adet
+miktar= 50
+birim fiyati= 2

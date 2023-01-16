@@ -1,33 +1,56 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Abduljalal lawal\\Source\\Repos\\Mahalle_marketiApp\\Mahalle_marketi\\Mahalle_marketi.csproj": {}
+    "C:\\Users\\orange\\Mahalle_marketiApp\\Mahalle_marketi\\Mahalle_marketi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Abduljalal lawal\\Source\\Repos\\Mahalle_marketiApp\\Mahalle_marketi\\Mahalle_marketi.csproj": {
+    "C:\\Users\\orange\\Mahalle_marketiApp\\ClassLibrary3\\ClassLibrary3.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\orange\\Mahalle_marketiApp\\ClassLibrary3\\ClassLibrary3.csproj",
+        "projectName": "ClassLibrary3",
+        "projectPath": "C:\\Users\\orange\\Mahalle_marketiApp\\ClassLibrary3\\ClassLibrary3.csproj",
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    },
+    "C:\\Users\\orange\\Mahalle_marketiApp\\Mahalle_marketi\\Mahalle_marketi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Abduljalal lawal\\Source\\Repos\\Mahalle_marketiApp\\Mahalle_marketi\\Mahalle_marketi.csproj",
+        "projectUniqueName": "C:\\Users\\orange\\Mahalle_marketiApp\\Mahalle_marketi\\Mahalle_marketi.csproj",
         "projectName": "Mahalle_marketi",
-        "projectPath": "C:\\Users\\Abduljalal lawal\\Source\\Repos\\Mahalle_marketiApp\\Mahalle_marketi\\Mahalle_marketi.csproj",
-        "packagesPath": "C:\\Users\\Abduljalal lawal\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Abduljalal lawal\\Source\\Repos\\Mahalle_marketiApp\\Mahalle_marketi\\obj\\",
+        "projectPath": "C:\\Users\\orange\\Mahalle_marketiApp\\Mahalle_marketi\\Mahalle_marketi.csproj",
+        "packagesPath": "C:\\Users\\orange\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\orange\\Mahalle_marketiApp\\Mahalle_marketi\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Abduljalal lawal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\orange\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0-windows"
+          "net7.0-windows"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0-windows7.0": {
-            "targetAlias": "net6.0-windows",
-            "projectReferences": {}
+          "net7.0-windows7.0": {
+            "targetAlias": "net7.0-windows",
+            "projectReferences": {
+              "C:\\Users\\orange\\Mahalle_marketiApp\\ClassLibrary3\\ClassLibrary3.csproj": {
+                "projectPath": "C:\\Users\\orange\\Mahalle_marketiApp\\ClassLibrary3\\ClassLibrary3.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -37,12 +60,36 @@
         }
       },
       "frameworks": {
-        "net6.0-windows7.0": {
-          "targetAlias": "net6.0-windows",
+        "net7.0-windows7.0": {
+          "targetAlias": "net7.0-windows",
           "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
             "FontAwesome.Sharp": {
               "target": "Package",
               "version": "[6.2.1, )"
+            },
+            "Guna.UI2.WinForms": {
+              "target": "Package",
+              "version": "[2.0.3.9, )"
+            },
+            "Microsoft.Office.Interop.Word": {
+              "target": "Package",
+              "version": "[15.0.4797.1004, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.31, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.5, )"
+            },
+            "iTextSharp": {
+              "target": "Package",
+              "version": "[5.5.13.3, )"
             }
           },
           "imports": [

@@ -1,0 +1,8 @@
+firme adi= A
+irsaliye no= 1
+ürun adi= portakalSuyu
+ürün kodu= 190
+ürün barkodu= 195
+miktar turu= adet
+miktar= 90
+birim fiyati= 10

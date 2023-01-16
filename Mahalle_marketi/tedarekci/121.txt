@@ -1,0 +1,8 @@
+firme adi= P
+irsaliye no= 1
+ürun adi= su
+ürün kodu= 140
+ürün barkodu= 121
+miktar turu= adet
+miktar= 100
+birim fiyati= 3

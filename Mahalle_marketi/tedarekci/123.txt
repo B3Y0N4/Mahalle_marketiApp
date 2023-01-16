@@ -1,0 +1,8 @@
+firme adi= R
+irsaliye no= 1
+ürun adi= muz
+ürün kodu= 135
+ürün barkodu= 123
+miktar turu= kg
+miktar= 10
+birim fiyati= 20

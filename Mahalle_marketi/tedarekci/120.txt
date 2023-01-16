@@ -1,0 +1,8 @@
+firme adi= M
+irsaliye no= 1
+ürun adi= chocolate
+ürün kodu= 135
+ürün barkodu= 120
+miktar turu= adet
+miktar= 60
+birim fiyati= 5

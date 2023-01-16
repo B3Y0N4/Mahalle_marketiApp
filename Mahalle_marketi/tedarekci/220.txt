@@ -1,0 +1,8 @@
+firme adi= P
+irsaliye no= 2
+ürun adi= meyve
+ürün kodu= 175
+ürün barkodu= 220
+miktar turu= kg
+miktar= 10
+birim fiyati= 12

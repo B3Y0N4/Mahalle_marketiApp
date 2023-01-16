@@ -1,0 +1,8 @@
+firme adi= B
+irsaliye no= 1
+ürun adi= visne
+ürün kodu= 126
+ürün barkodu= 113
+miktar turu= kg
+miktar= 10
+birim fiyati= 15

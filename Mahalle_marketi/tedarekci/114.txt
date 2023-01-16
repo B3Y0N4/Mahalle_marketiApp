@@ -1,0 +1,8 @@
+firme adi= H
+irsaliye no= 2
+ürun adi= Cips
+ürün kodu= 131
+ürün barkodu= 114
+miktar turu= adet
+miktar= 50
+birim fiyati= 5
