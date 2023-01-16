@@ -1,8 +1,10 @@
-﻿using MySqlX.XDevAPI.Relational;
+﻿using ClassLibrary3;
+using MySqlX.XDevAPI.Relational;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,6 +15,21 @@ namespace Mahalle_marketi.UserControls
 {
     public partial class UC_satisKayitlari : UserControl
     {
+        public static SqlConnection GetConnection()
+        {
+            String conString = "Data Source=LAPTOP-L2L5OAL6;Initial Catalog=mahalle_marketi;Integrated Security=True";
+            SqlConnection con = new SqlConnection(conString);
+            try
+            {
+                con.Open();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Sql server Connection! \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            return con;
+        }
         List<String> satisId_listesi = new List<String>();
         int satis_toplam_tutar;
         int odenen_satis_adeti;
@@ -59,31 +76,41 @@ namespace Mahalle_marketi.UserControls
             label_borc_tutari.Text = (satis_toplam_tutar - odenen_satis_tutari).ToString() + " ₺";
         }
 
-        private void tabloyu_doldur(String query, DateTime now, DateTime oldDate, bool parameter)
-        {
-            DataTable dt;
-            try
-            {
-                dt = DbSatis.Satis_kayitTablosunu_Doldur(query, now, oldDate, parameter) != null ? DbSatis.Satis_kayitTablosunu_Doldur(query, now, oldDate, parameter) : null;
-            }
-            catch
-            {
-                return;
-            }
+        //private void tabloyu_doldur(String query)
+        //{
+        //    DataTable tb;
+        //    try
+        //    {
+        //        string sql = query;
+        //        SqlConnection con = GetConnection();
+        //        SqlCommand cmd = new SqlCommand(sql, con);
+        //        cmd.Parameters.Add("@kullaniciAdi", SqlDbType.VarChar).Value = kullanici.kullanici_adi;
 
-            if (dt == null) return;
+                
+        //        SqlDataAdapter apd = new SqlDataAdapter(cmd);
+        //        tb = new DataTable();
+        //        apd.Fill(tb);
+
+        //        //dt = DbSatis.Satis_kayitTablosunu_Doldur(query, now, oldDate, parameter) != null ? DbSatis.Satis_kayitTablosunu_Doldur(query, now, oldDate, parameter) : null;
+        //    }
+        //    catch
+        //    {
+        //        return;
+        //    }
+
+        //    if (tb == null) return;
             
-            for (int i = 0; i < dt.Rows.Count; i++)
-            {
-                DataRow dr = dt.Rows[i];
-                DataGridView_satisKayitlari.Rows.Insert(0, dr["SMüşteriAdıSoyadı"], dr["StoplamTutar"], dr["Södenen"], dr["Sborç"], dr["Starih"]);
-                satisId_listesi.Insert(0, (String)dr["SatışId"]);
-            }
+        //    for (int i = 0; i < tb.Rows.Count; i++)
+        //    {
+        //        DataRow dr = tb.Rows[i];
+        //        DataGridView_satisKayitlari.Rows.Insert(0, dr["SMüşteriAdıSoyadı"], dr["StoplamTutar"], dr["Södenen"], dr["Sborç"], dr["Starih"]);
+        //        satisId_listesi.Insert(0, (String)dr["SatışId"]);
+        //    }
 
-            istatistikleri_guncelle();
+        //    istatistikleri_guncelle();
 
 
-        }
+        //}
 
         private void ComboBox_filtreleme_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -93,28 +120,57 @@ namespace Mahalle_marketi.UserControls
             DateTime now = DateTime.Now;
             if (ComboBox_filtreleme.Text == "Bugün")
             {
-                tabloyu_doldur("select * from satis where starihi = convert(VARCHAR(10), GETDATE(), 120)", now, now, false);
+                //tabloyu_doldur("select * from satis where satis.the_date > DATE_SUB(CURDATE(), INTERVAL 1 DAY)");
+                //String query = "Select * From tedarekci";
+                //DbTedarikci.display_tedarikci_borclari(query, DataGridView_satisKayitlari);
+                //string sql = "select * from satis where satis.starihi >= DATEADD(day,-1,GETDATE())";
+                //SqlConnection con = GetConnection();
+                //SqlDataAdapter da = new SqlDataAdapter(sql, con);
+                //DataTable dt = new DataTable(sql);
+                //da.Fill(dt);
+                //DataGridView_satisKayitlari.DataSource = dt;
+
+                
+                //DataGridView_satisKayitlari.DataSource = model1.satis.ToList();
+                using (Model1 db = new Model1())
+                {
+                    var result = db.satis.SingleOrDefault(b => b.starihi == DateTime.Now.ToString());
+                    if (result != null)
+                    {
+                        DataGridView_satisKayitlari.DataSource = db.satis.ToList();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Bugün satis hic yok.");
+                        DataGridView_satisKayitlari.DataSource = db.satis.ToList();
+                    }
+                }
+
+
+
+
+
             }
-            else if (ComboBox_filtreleme.Text == "son hafta")
-            {
-                DateTime bir_hafta_once = now.AddDays(-7);
-                tabloyu_doldur("select * from satis where  starihi between @oldDate and @now", bir_hafta_once, now, true);
-            }
-            else if (ComboBox_filtreleme.Text == "Son ayda")
-            {
-                DateTime bir_ay_once = now.AddDays(-30);
-                tabloyu_doldur("select * from satis where  starihi between @oldDate and @now", bir_ay_once, now, true);
-            }
-            else if (ComboBox_filtreleme.Text == "Son yılda")
-            {
-                DateTime bir_yil_once = now.AddYears(-1);
-                tabloyu_doldur("select * from satis where  starihi between @oldDate and @now", bir_yil_once, now, true);
-            }
-            //kullaniciAdi = @kullanici_adi and
-            else
-            {
-                tabloyu_doldur("select * from satis ", now, now, false); //where kullaniciAdi = @kullanici_adi
-            }
+            //else if (ComboBox_filtreleme.Text == "son hafta")
+            //{
+            //    DateTime bir_hafta_once = now.AddDays(-7);
+            //    tabloyu_doldur("select * from satis where  starihi between @oldDate and @now", bir_hafta_once, now, true);
+            //}
+            //else if (ComboBox_filtreleme.Text == "Son ayda")
+            //{
+            //    DateTime bir_ay_once = now.AddDays(-30);
+            //    tabloyu_doldur("select * from satis where  starihi between @oldDate and @now", bir_ay_once, now, true);
+            //}
+            //else if (ComboBox_filtreleme.Text == "Son yılda")
+            //{
+            //    DateTime bir_yil_once = now.AddYears(-1);
+            //    tabloyu_doldur("select * from satis where  starihi between @oldDate and @now", bir_yil_once, now, true);
+            //}
+            ////kullaniciAdi = @kullanici_adi and
+            //else
+            //{
+            //    tabloyu_doldur("select * from satis ", now, now, false); //where kullaniciAdi = @kullanici_adi
+            //}
         }
 
         private void DataGridView_satisKayitlari_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -145,6 +201,6 @@ namespace Mahalle_marketi.UserControls
             }
         }
 
-       
+        
     }
 }
