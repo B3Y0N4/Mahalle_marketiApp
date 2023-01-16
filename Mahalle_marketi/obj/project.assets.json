@@ -569,15 +569,6 @@
             "rid": "win"
           }
         }
-      },
-      "ClassLibrary3/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/ClassLibrary3.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/ClassLibrary3.dll": {}
-        }
       }
     }
   },
@@ -1684,16 +1675,11 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
-    },
-    "ClassLibrary3/1.0.0": {
-      "type": "project",
-      "path": "../ClassLibrary3/ClassLibrary3.csproj",
-      "msbuildProject": "../ClassLibrary3/ClassLibrary3.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0-windows7.0": [
-      "ClassLibrary3 >= 1.0.0",
+      "C:\\Users\\OUSSAMA\\Desktop\\Mahalle_marketiApp\\ClassLibrary3\\ClassLibrary3.csproj",
       "EntityFramework >= 6.4.4",
       "FontAwesome.Sharp >= 6.2.1",
       "Guna.UI2.WinForms >= 2.0.3.9",
@@ -1704,24 +1690,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\orange\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\OUSSAMA\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\orange\\Mahalle_marketiApp\\Mahalle_marketi\\Mahalle_marketi.csproj",
+      "projectUniqueName": "C:\\Users\\OUSSAMA\\Desktop\\Mahalle_marketiApp\\Mahalle_marketi\\Mahalle_marketi.csproj",
       "projectName": "Mahalle_marketi",
-      "projectPath": "C:\\Users\\orange\\Mahalle_marketiApp\\Mahalle_marketi\\Mahalle_marketi.csproj",
-      "packagesPath": "C:\\Users\\orange\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\orange\\Mahalle_marketiApp\\Mahalle_marketi\\obj\\",
+      "projectPath": "C:\\Users\\OUSSAMA\\Desktop\\Mahalle_marketiApp\\Mahalle_marketi\\Mahalle_marketi.csproj",
+      "packagesPath": "C:\\Users\\OUSSAMA\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\OUSSAMA\\Desktop\\Mahalle_marketiApp\\Mahalle_marketi\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\orange\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\OUSSAMA\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1735,8 +1716,8 @@
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
           "projectReferences": {
-            "C:\\Users\\orange\\Mahalle_marketiApp\\ClassLibrary3\\ClassLibrary3.csproj": {
-              "projectPath": "C:\\Users\\orange\\Mahalle_marketiApp\\ClassLibrary3\\ClassLibrary3.csproj"
+            "C:\\Users\\OUSSAMA\\Desktop\\Mahalle_marketiApp\\ClassLibrary3\\ClassLibrary3.csproj": {
+              "projectPath": "C:\\Users\\OUSSAMA\\Desktop\\Mahalle_marketiApp\\ClassLibrary3\\ClassLibrary3.csproj"
             }
           }
         }
@@ -1804,6 +1785,15 @@
     }
   },
   "logs": [
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Unable to find project information for 'C:\\Users\\OUSSAMA\\Desktop\\Mahalle_marketiApp\\ClassLibrary3\\ClassLibrary3.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
+      "libraryId": "C:\\Users\\OUSSAMA\\Desktop\\Mahalle_marketiApp\\ClassLibrary3\\ClassLibrary3.csproj",
+      "targetGraphs": [
+        "net7.0-windows7.0"
+      ]
+    },
     {
       "code": "NU1701",
       "level": "Warning",
